@@ -1,2 +1,2 @@
 
-### 🍎 클론 코딩
+### 🍎 clone codings
