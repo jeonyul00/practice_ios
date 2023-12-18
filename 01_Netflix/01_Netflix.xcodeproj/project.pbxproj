@@ -20,6 +20,7 @@
 		5CB5DC3E2B30067700C79A98 /* BaseTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5DC3D2B30067700C79A98 /* BaseTabBar.storyboard */; };
 		5CB5DC432B30094A00C79A98 /* NewHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5DC422B30094A00C79A98 /* NewHotViewController.swift */; };
 		5CB5DC452B30095500C79A98 /* NewHot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5DC442B30095500C79A98 /* NewHot.storyboard */; };
+		5CB5DC472B30175A00C79A98 /* HomeNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5DC462B30175A00C79A98 /* HomeNaviViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5CB5DC3D2B30067700C79A98 /* BaseTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseTabBar.storyboard; sourceTree = "<group>"; };
 		5CB5DC422B30094A00C79A98 /* NewHotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotViewController.swift; sourceTree = "<group>"; };
 		5CB5DC442B30095500C79A98 /* NewHot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewHot.storyboard; sourceTree = "<group>"; };
+		5CB5DC462B30175A00C79A98 /* HomeNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		5CB5DC402B30076400C79A98 /* Home VC */ = {
 			isa = PBXGroup;
 			children = (
+				5CB5DC462B30175A00C79A98 /* HomeNaviViewController.swift */,
 				5CB5DC0F2B30042800C79A98 /* HomeViewController.swift */,
 				5CB5DC112B30042800C79A98 /* Home.storyboard */,
 			);
@@ -299,6 +302,7 @@
 				5CB5DC102B30042800C79A98 /* HomeViewController.swift in Sources */,
 				5CB5DC432B30094A00C79A98 /* NewHotViewController.swift in Sources */,
 				5CB5DC3C2B30065A00C79A98 /* MainTabbarViewController.swift in Sources */,
+				5CB5DC472B30175A00C79A98 /* HomeNaviViewController.swift in Sources */,
 				5CB5DC0C2B30042800C79A98 /* AppDelegate.swift in Sources */,
 				5CB5DC0E2B30042800C79A98 /* SceneDelegate.swift in Sources */,
 			);
