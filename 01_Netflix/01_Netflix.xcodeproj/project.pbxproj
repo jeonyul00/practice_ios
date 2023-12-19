@@ -22,6 +22,14 @@
 		5CB5DC452B30095500C79A98 /* NewHot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5DC442B30095500C79A98 /* NewHot.storyboard */; };
 		5CB5DC472B30175A00C79A98 /* HomeNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5DC462B30175A00C79A98 /* HomeNaviViewController.swift */; };
 		5CB5DC492B30290E00C79A98 /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5DC482B30290E00C79A98 /* HomeTableHeaderView.swift */; };
+		AB10364B2B3133CB0011C31F /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1036492B3133CB0011C31F /* HomeCollectionViewCell.swift */; };
+		AB10364C2B3133CB0011C31F /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB10364A2B3133CB0011C31F /* HomeCollectionViewCell.xib */; };
+		AB33415F2B3131AE00181B47 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33415D2B3131AE00181B47 /* HomeCell.swift */; };
+		AB3341602B3131AE00181B47 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB33415E2B3131AE00181B47 /* HomeCell.xib */; };
+		ABA845192B31373200765668 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA845182B31373200765668 /* MovieModel.swift */; };
+		ABA8451B2B313C8400765668 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8451A2B313C8400765668 /* NetworkLayer.swift */; };
+		ABA8451D2B31409600765668 /* TypeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8451C2B31409600765668 /* TypeInfo.swift */; };
+		ABA8451F2B315A5300765668 /* HomeTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8451E2B315A5300765668 /* HomeTableViewHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,14 @@
 		5CB5DC442B30095500C79A98 /* NewHot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewHot.storyboard; sourceTree = "<group>"; };
 		5CB5DC462B30175A00C79A98 /* HomeNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviViewController.swift; sourceTree = "<group>"; };
 		5CB5DC482B30290E00C79A98 /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
+		AB1036492B3133CB0011C31F /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB10364A2B3133CB0011C31F /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		AB33415D2B3131AE00181B47 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		AB33415E2B3131AE00181B47 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		ABA845182B31373200765668 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		ABA8451A2B313C8400765668 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		ABA8451C2B31409600765668 /* TypeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeInfo.swift; sourceTree = "<group>"; };
+		ABA8451E2B315A5300765668 /* HomeTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,7 @@
 		5CB5DC0A2B30042800C79A98 /* 01_Netflix */ = {
 			isa = PBXGroup;
 			children = (
+				ABA845172B31370900765668 /* Network */,
 				5CB5DC0B2B30042800C79A98 /* AppDelegate.swift */,
 				5CB5DC0D2B30042800C79A98 /* SceneDelegate.swift */,
 				5CB5DC412B30076D00C79A98 /* New Hot VC */,
@@ -152,10 +169,13 @@
 		5CB5DC402B30076400C79A98 /* Home VC */ = {
 			isa = PBXGroup;
 			children = (
+				ABA845202B315A6500765668 /* Table Header */,
 				5CB5DC462B30175A00C79A98 /* HomeNaviViewController.swift */,
 				5CB5DC0F2B30042800C79A98 /* HomeViewController.swift */,
 				5CB5DC112B30042800C79A98 /* Home.storyboard */,
 				5CB5DC482B30290E00C79A98 /* HomeTableHeaderView.swift */,
+				AB3341612B3131C000181B47 /* Home Cell */,
+				AB10364D2B3133D60011C31F /* Horizontal Cell */,
 			);
 			path = "Home VC";
 			sourceTree = "<group>";
@@ -167,6 +187,42 @@
 				5CB5DC442B30095500C79A98 /* NewHot.storyboard */,
 			);
 			path = "New Hot VC";
+			sourceTree = "<group>";
+		};
+		AB10364D2B3133D60011C31F /* Horizontal Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB1036492B3133CB0011C31F /* HomeCollectionViewCell.swift */,
+				AB10364A2B3133CB0011C31F /* HomeCollectionViewCell.xib */,
+			);
+			path = "Horizontal Cell";
+			sourceTree = "<group>";
+		};
+		AB3341612B3131C000181B47 /* Home Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB33415D2B3131AE00181B47 /* HomeCell.swift */,
+				AB33415E2B3131AE00181B47 /* HomeCell.xib */,
+			);
+			path = "Home Cell";
+			sourceTree = "<group>";
+		};
+		ABA845172B31370900765668 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ABA845182B31373200765668 /* MovieModel.swift */,
+				ABA8451A2B313C8400765668 /* NetworkLayer.swift */,
+				ABA8451C2B31409600765668 /* TypeInfo.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ABA845202B315A6500765668 /* Table Header */ = {
+			isa = PBXGroup;
+			children = (
+				ABA8451E2B315A5300765668 /* HomeTableViewHeaderView.swift */,
+			);
+			path = "Table Header";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +333,8 @@
 				5CB5DC182B30042800C79A98 /* LaunchScreen.storyboard in Resources */,
 				5CB5DC152B30042800C79A98 /* Assets.xcassets in Resources */,
 				5CB5DC132B30042800C79A98 /* Home.storyboard in Resources */,
+				AB10364C2B3133CB0011C31F /* HomeCollectionViewCell.xib in Resources */,
+				AB3341602B3131AE00181B47 /* HomeCell.xib in Resources */,
 				5CB5DC3E2B30067700C79A98 /* BaseTabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,8 +362,14 @@
 			files = (
 				5CB5DC102B30042800C79A98 /* HomeViewController.swift in Sources */,
 				5CB5DC432B30094A00C79A98 /* NewHotViewController.swift in Sources */,
+				ABA845192B31373200765668 /* MovieModel.swift in Sources */,
+				AB33415F2B3131AE00181B47 /* HomeCell.swift in Sources */,
 				5CB5DC3C2B30065A00C79A98 /* MainTabbarViewController.swift in Sources */,
+				ABA8451B2B313C8400765668 /* NetworkLayer.swift in Sources */,
 				5CB5DC472B30175A00C79A98 /* HomeNaviViewController.swift in Sources */,
+				ABA8451F2B315A5300765668 /* HomeTableViewHeaderView.swift in Sources */,
+				ABA8451D2B31409600765668 /* TypeInfo.swift in Sources */,
+				AB10364B2B3133CB0011C31F /* HomeCollectionViewCell.swift in Sources */,
 				5CB5DC0C2B30042800C79A98 /* AppDelegate.swift in Sources */,
 				5CB5DC0E2B30042800C79A98 /* SceneDelegate.swift in Sources */,
 				5CB5DC492B30290E00C79A98 /* HomeTableHeaderView.swift in Sources */,
