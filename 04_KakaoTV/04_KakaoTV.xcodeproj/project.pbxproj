@@ -17,6 +17,9 @@
 		AB58442C2B32D27E0056BF0D /* _4_KakaoTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58442B2B32D27E0056BF0D /* _4_KakaoTVUITests.swift */; };
 		AB58442E2B32D27E0056BF0D /* _4_KakaoTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58442D2B32D27E0056BF0D /* _4_KakaoTVUITestsLaunchTests.swift */; };
 		AB58443B2B32DB7A0056BF0D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB58443A2B32DB7A0056BF0D /* Colors.xcassets */; };
+		AB58443F2B32E8CA0056BF0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58443E2B32E8CA0056BF0D /* HomeViewController.swift */; };
+		AB5844432B32EA950056BF0D /* HomeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5844412B32EA950056BF0D /* HomeVideoCell.swift */; };
+		AB5844442B32EA950056BF0D /* HomeVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5844422B32EA950056BF0D /* HomeVideoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		AB58442B2B32D27E0056BF0D /* _4_KakaoTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4_KakaoTVUITests.swift; sourceTree = "<group>"; };
 		AB58442D2B32D27E0056BF0D /* _4_KakaoTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4_KakaoTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AB58443A2B32DB7A0056BF0D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		AB58443E2B32E8CA0056BF0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AB5844412B32EA950056BF0D /* HomeVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVideoCell.swift; sourceTree = "<group>"; };
+		AB5844422B32EA950056BF0D /* HomeVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVideoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +107,10 @@
 		AB5844092B32D27E0056BF0D /* 04_KakaoTV */ = {
 			isa = PBXGroup;
 			children = (
+				AB58443D2B32E8AA0056BF0D /* Login */,
+				AB58443C2B32E88F0056BF0D /* Home */,
 				AB58440A2B32D27E0056BF0D /* AppDelegate.swift */,
 				AB58440C2B32D27E0056BF0D /* SceneDelegate.swift */,
-				AB58440E2B32D27E0056BF0D /* LoginViewController.swift */,
 				AB5844102B32D27E0056BF0D /* Main.storyboard */,
 				AB5844152B32D27E0056BF0D /* LaunchScreen.storyboard */,
 				AB5844182B32D27E0056BF0D /* Info.plist */,
@@ -128,6 +135,32 @@
 				AB58442D2B32D27E0056BF0D /* _4_KakaoTVUITestsLaunchTests.swift */,
 			);
 			path = 04_KakaoTVUITests;
+			sourceTree = "<group>";
+		};
+		AB58443C2B32E88F0056BF0D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB5844402B32EA410056BF0D /* Cell */,
+				AB58443E2B32E8CA0056BF0D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AB58443D2B32E8AA0056BF0D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AB58440E2B32D27E0056BF0D /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AB5844402B32EA410056BF0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB5844412B32EA950056BF0D /* HomeVideoCell.swift */,
+				AB5844422B32EA950056BF0D /* HomeVideoCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +270,7 @@
 				AB5844172B32D27E0056BF0D /* LaunchScreen.storyboard in Resources */,
 				AB58443B2B32DB7A0056BF0D /* Colors.xcassets in Resources */,
 				AB5844142B32D27E0056BF0D /* Assets.xcassets in Resources */,
+				AB5844442B32EA950056BF0D /* HomeVideoCell.xib in Resources */,
 				AB5844122B32D27E0056BF0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +299,8 @@
 				AB58440F2B32D27E0056BF0D /* LoginViewController.swift in Sources */,
 				AB58440B2B32D27E0056BF0D /* AppDelegate.swift in Sources */,
 				AB58440D2B32D27E0056BF0D /* SceneDelegate.swift in Sources */,
+				AB5844432B32EA950056BF0D /* HomeVideoCell.swift in Sources */,
+				AB58443F2B32E8CA0056BF0D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
