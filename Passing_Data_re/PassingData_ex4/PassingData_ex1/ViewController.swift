@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func delegateMoveToDetail(_ sender: Any) {
+        // 만약 얘가 전역 변수라면 상호참조가 됨
         let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         // 이러면 프로토콜 타입만 보낼 수 있지
         detailVC.delegate = self
@@ -43,6 +44,7 @@ extension ViewController:ViewControllerDelegate {
 }
 
 
-protocol ViewControllerDelegate {
+// AnyObject 약한 참조를 쓰려면 확장해야함
+protocol ViewControllerDelegate: AnyObject {
     func rightLabelString(str:String)
 }

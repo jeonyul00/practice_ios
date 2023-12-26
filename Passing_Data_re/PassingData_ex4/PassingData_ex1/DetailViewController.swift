@@ -14,7 +14,9 @@ class DetailViewController: UIViewController {
     var detailName = "KIM"
     var detailAge = 0
     
-    var delegate: ViewControllerDelegate?
+    // 상호 참조를 끊기 위해 weak
+    // 근데 사실 여기서는 상호참조가 아니라서 반드시 할 필요 없다.
+    weak var delegate: ViewControllerDelegate?
     
     
     override func viewDidLoad() {
