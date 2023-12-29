@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PassingData_ex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYv-v9-NZJ">
+                                <rect key="frame" x="20" y="79" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyD-8i-Sct">
+                                <rect key="frame" x="20" y="120" width="136" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Move To Detail"/>
+                                <connections>
+                                    <action selector="moveToDetailVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wjU-bH-lVx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eYv-v9-NZJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CsL-ub-UFn"/>
+                            <constraint firstItem="gyD-8i-Sct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UGA-OI-F6y"/>
+                            <constraint firstItem="gyD-8i-Sct" firstAttribute="top" secondItem="eYv-v9-NZJ" secondAttribute="bottom" constant="20" id="cbN-DJ-OMB"/>
+                            <constraint firstItem="eYv-v9-NZJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="s8Y-2H-cbf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="eYv-v9-NZJ" id="Ud1-QM-WOF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="-28"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="wXV-Mm-IQ6">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="sqH-N9-9x7" customClass="DetailViewController" customModule="PassingData_ex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7G-qX-uHu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiO-KQ-QaW">
+                                <rect key="frame" x="175.66666666666666" y="89" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjV-d4-aVw">
+                                <rect key="frame" x="175.66666666666666" y="140" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Odr-H9-Ovj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NiO-KQ-QaW" firstAttribute="centerX" secondItem="j7G-qX-uHu" secondAttribute="centerX" id="4vu-bp-lg3"/>
+                            <constraint firstItem="KjV-d4-aVw" firstAttribute="top" secondItem="NiO-KQ-QaW" secondAttribute="bottom" constant="30" id="MRR-9B-Oug"/>
+                            <constraint firstItem="KjV-d4-aVw" firstAttribute="centerX" secondItem="j7G-qX-uHu" secondAttribute="centerX" id="Mtz-q0-66m"/>
+                            <constraint firstItem="NiO-KQ-QaW" firstAttribute="top" secondItem="Odr-H9-Ovj" secondAttribute="top" constant="30" id="WKu-g0-X82"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="KjV-d4-aVw" id="6Ak-9c-24s"/>
+                        <outlet property="nameLabel" destination="NiO-KQ-QaW" id="Lbt-OZ-2JY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LP4-ab-afm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
