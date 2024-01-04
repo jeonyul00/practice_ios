@@ -12,11 +12,16 @@ class MainTabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        // home에 있는 viewController
+        //        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         let newHotVC = UIStoryboard(name: "NewHot", bundle: nil).instantiateViewController(withIdentifier: "NewHotViewController") as! NewHotViewController
+        // home에 있는 naviViewController
+        let homeNaviVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeNaviViewController") as! HomeNaviViewController
         
-        homeVC.tabBarItem.title = "home"
-        homeVC.tabBarItem.image = UIImage(systemName: "house")
+        //        homeVC.tabBarItem.title = "home"
+        //        homeVC.tabBarItem.image = UIImage(systemName: "house")
+        homeNaviVC.tabBarItem.title = "home"
+        homeNaviVC.tabBarItem.image = UIImage(systemName: "house")
         newHotVC.tabBarItem.title = "New & Hot"
         newHotVC.tabBarItem.image = UIImage(systemName: "play.rectangle.on.rectangle")
         
@@ -24,7 +29,7 @@ class MainTabbarViewController: UITabBarController {
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.backgroundColor = .black
         // tabBarAppearance.backgroundEffect = UIBlurEffect(style: .dark)
-                        
+        
         // 설정: 탭바 아이템
         let tabBarItemAppearance = UITabBarItemAppearance()
         tabBarItemAppearance.normal.iconColor = .darkGray
@@ -41,7 +46,7 @@ class MainTabbarViewController: UITabBarController {
         self.tabBar.standardAppearance = tabBarAppearance
         self.tabBar.scrollEdgeAppearance = tabBarAppearance
         
-        self.viewControllers = [homeVC, newHotVC]
+        self.viewControllers = [homeNaviVC, newHotVC]
     }
     
 }

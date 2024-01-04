@@ -20,6 +20,7 @@
 		AB6BE4AE2B4682C80027A527 /* BaseTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6BE4AD2B4682C80027A527 /* BaseTabBar.storyboard */; };
 		AB6BE4B32B4685380027A527 /* NewHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE4B22B4685380027A527 /* NewHotViewController.swift */; };
 		AB6BE4B52B4685470027A527 /* NewHot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6BE4B42B4685470027A527 /* NewHot.storyboard */; };
+		AB6BE4B72B468C0A0027A527 /* HomeNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE4B62B468C0A0027A527 /* HomeNaviViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		AB6BE4AD2B4682C80027A527 /* BaseTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseTabBar.storyboard; sourceTree = "<group>"; };
 		AB6BE4B22B4685380027A527 /* NewHotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotViewController.swift; sourceTree = "<group>"; };
 		AB6BE4B42B4685470027A527 /* NewHot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewHot.storyboard; sourceTree = "<group>"; };
+		AB6BE4B62B468C0A0027A527 /* HomeNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		AB6BE4B02B4683880027A527 /* Home VC */ = {
 			isa = PBXGroup;
 			children = (
+				AB6BE4B62B468C0A0027A527 /* HomeNaviViewController.swift */,
 				AB6BE47F2B4682050027A527 /* HomeViewController.swift */,
 				AB6BE4812B4682050027A527 /* Home.storyboard */,
 			);
@@ -299,6 +302,7 @@
 				AB6BE4802B4682050027A527 /* HomeViewController.swift in Sources */,
 				AB6BE4B32B4685380027A527 /* NewHotViewController.swift in Sources */,
 				AB6BE4AC2B4682B10027A527 /* MainTabbarViewController.swift in Sources */,
+				AB6BE4B72B468C0A0027A527 /* HomeNaviViewController.swift in Sources */,
 				AB6BE47C2B4682050027A527 /* AppDelegate.swift in Sources */,
 				AB6BE47E2B4682050027A527 /* SceneDelegate.swift in Sources */,
 			);
