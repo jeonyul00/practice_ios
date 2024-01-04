@@ -8,10 +8,17 @@
 import UIKit
 
 class HomeNaviViewController: UINavigationController {
+    
+    var effectViewAlpha:CGFloat = 0 {
+        didSet {
+            visuallEffectView.alpha = effectViewAlpha
+        }
+    }
     var statusBarHeight = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.statusBarManager?.statusBarFrame.height ?? 0
-    lazy var visuallEffectView: UIVisualEffectView = {
+    lazy private var visuallEffectView: UIVisualEffectView = {
         let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
         effectView.frame = self.navigationBar.bounds.insetBy(dx: 0, dy: -statusBarHeight).offsetBy(dx: 0, dy: -statusBarHeight)
+        effectView.alpha = 0
         return effectView
     }()
     
