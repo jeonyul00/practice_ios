@@ -18,6 +18,10 @@ class HomeViewController: UIViewController {
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NetworkLayer.request(type: .movie) { movieModel in
+            print(movieModel)
+        }
     }
     
 }

@@ -22,6 +22,13 @@
 		AB6BE4B52B4685470027A527 /* NewHot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6BE4B42B4685470027A527 /* NewHot.storyboard */; };
 		AB6BE4B72B468C0A0027A527 /* HomeNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE4B62B468C0A0027A527 /* HomeNaviViewController.swift */; };
 		AB6BE4B92B469B2F0027A527 /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE4B82B469B2F0027A527 /* HomeTableHeaderView.swift */; };
+		AB6BE4BC2B46A4D80027A527 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE4BA2B46A4D80027A527 /* HomeCell.swift */; };
+		AB6BE4BD2B46A4D80027A527 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6BE4BB2B46A4D80027A527 /* HomeCell.xib */; };
+		AB826E7C2B46A74800460397 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB826E7A2B46A74800460397 /* HomeCollectionViewCell.swift */; };
+		AB826E7D2B46A74800460397 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB826E7B2B46A74800460397 /* HomeCollectionViewCell.xib */; };
+		AB826E812B46A9A200460397 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB826E802B46A9A200460397 /* MovieModel.swift */; };
+		AB826E832B46ACDE00460397 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB826E822B46ACDE00460397 /* NetworkLayer.swift */; };
+		AB826E852B46B34300460397 /* TypeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB826E842B46B34300460397 /* TypeInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,13 @@
 		AB6BE4B42B4685470027A527 /* NewHot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewHot.storyboard; sourceTree = "<group>"; };
 		AB6BE4B62B468C0A0027A527 /* HomeNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviViewController.swift; sourceTree = "<group>"; };
 		AB6BE4B82B469B2F0027A527 /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
+		AB6BE4BA2B46A4D80027A527 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		AB6BE4BB2B46A4D80027A527 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		AB826E7A2B46A74800460397 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB826E7B2B46A74800460397 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		AB826E802B46A9A200460397 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		AB826E822B46ACDE00460397 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		AB826E842B46B34300460397 /* TypeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +127,7 @@
 			children = (
 				AB6BE47B2B4682050027A527 /* AppDelegate.swift */,
 				AB6BE47D2B4682050027A527 /* SceneDelegate.swift */,
+				AB826E7F2B46A97B00460397 /* Network */,
 				AB6BE4B02B4683880027A527 /* Home VC */,
 				AB6BE4B12B4683910027A527 /* New Hot VC */,
 				AB6BE4AF2B4682DD0027A527 /* Tabbar */,
@@ -156,6 +171,7 @@
 				AB6BE47F2B4682050027A527 /* HomeViewController.swift */,
 				AB6BE4812B4682050027A527 /* Home.storyboard */,
 				AB6BE4B82B469B2F0027A527 /* HomeTableHeaderView.swift */,
+				AB6BE4BE2B46A4E10027A527 /* Home Cell */,
 			);
 			path = "Home VC";
 			sourceTree = "<group>";
@@ -167,6 +183,35 @@
 				AB6BE4B42B4685470027A527 /* NewHot.storyboard */,
 			);
 			path = "New Hot VC";
+			sourceTree = "<group>";
+		};
+		AB6BE4BE2B46A4E10027A527 /* Home Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB6BE4BA2B46A4D80027A527 /* HomeCell.swift */,
+				AB6BE4BB2B46A4D80027A527 /* HomeCell.xib */,
+				AB826E7E2B46A75100460397 /* Horizontal cell */,
+			);
+			path = "Home Cell";
+			sourceTree = "<group>";
+		};
+		AB826E7E2B46A75100460397 /* Horizontal cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB826E7A2B46A74800460397 /* HomeCollectionViewCell.swift */,
+				AB826E7B2B46A74800460397 /* HomeCollectionViewCell.xib */,
+			);
+			path = "Horizontal cell";
+			sourceTree = "<group>";
+		};
+		AB826E7F2B46A97B00460397 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AB826E802B46A9A200460397 /* MovieModel.swift */,
+				AB826E822B46ACDE00460397 /* NetworkLayer.swift */,
+				AB826E842B46B34300460397 /* TypeInfo.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +322,8 @@
 				AB6BE4882B4682060027A527 /* LaunchScreen.storyboard in Resources */,
 				AB6BE4852B4682060027A527 /* Assets.xcassets in Resources */,
 				AB6BE4832B4682050027A527 /* Home.storyboard in Resources */,
+				AB826E7D2B46A74800460397 /* HomeCollectionViewCell.xib in Resources */,
+				AB6BE4BD2B46A4D80027A527 /* HomeCell.xib in Resources */,
 				AB6BE4AE2B4682C80027A527 /* BaseTabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,8 +351,13 @@
 			files = (
 				AB6BE4802B4682050027A527 /* HomeViewController.swift in Sources */,
 				AB6BE4B32B4685380027A527 /* NewHotViewController.swift in Sources */,
+				AB826E812B46A9A200460397 /* MovieModel.swift in Sources */,
+				AB6BE4BC2B46A4D80027A527 /* HomeCell.swift in Sources */,
 				AB6BE4AC2B4682B10027A527 /* MainTabbarViewController.swift in Sources */,
+				AB826E832B46ACDE00460397 /* NetworkLayer.swift in Sources */,
 				AB6BE4B72B468C0A0027A527 /* HomeNaviViewController.swift in Sources */,
+				AB826E852B46B34300460397 /* TypeInfo.swift in Sources */,
+				AB826E7C2B46A74800460397 /* HomeCollectionViewCell.swift in Sources */,
 				AB6BE47C2B4682050027A527 /* AppDelegate.swift in Sources */,
 				AB6BE47E2B4682050027A527 /* SceneDelegate.swift in Sources */,
 				AB6BE4B92B469B2F0027A527 /* HomeTableHeaderView.swift in Sources */,
