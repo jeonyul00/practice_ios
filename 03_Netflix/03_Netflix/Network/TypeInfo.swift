@@ -7,12 +7,11 @@
 
 import Foundation
 
-enum MediaType {
-    case movie
-    case podcast
+enum MediaType:Int, CaseIterable {
+    case movie    
     case music
+    case audiobook
     case musicVideo
-    case tvShow
     
     var queryValue: String {
         return "\(self)"
@@ -22,14 +21,12 @@ enum MediaType {
         switch self {
         case .movie:
             return "영화"
-        case .podcast:
-            return "팟캐스트"
         case .music:
             return "뮤직"
         case .musicVideo:
             return "뮤직 비디오"
-        case .tvShow:
-            return "tv쇼"
+        case .audiobook:
+            return "오디오북"
         }
     }
 }

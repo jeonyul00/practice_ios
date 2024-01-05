@@ -18,21 +18,31 @@ class HomeViewController: UIViewController {
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         
-        NetworkLayer.request(type: .movie) { movieModel in
-            print(movieModel)
-        }
     }
-    
 }
 
 extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
+    // 로우
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
+    }
+    
+    // 섹션
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return MediaType.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeCell
+        cell.requestMediaAPI(type: MediaType(rawValue: indexPath.section))
+        return cell
+    }
+    
+    // 높이 설정
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
     }
     
 }

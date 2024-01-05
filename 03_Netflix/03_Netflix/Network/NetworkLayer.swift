@@ -21,7 +21,7 @@ class NetworkLayer {
                 guard let hasData = data else { return }
                 let image = UIImage(data: hasData)
                 completion(image)
-            }
+            }.resume()
         }
     }
     

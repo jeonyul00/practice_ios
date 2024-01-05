@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CED1A5B2B47D07D009397B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */; };
 		AB6BE47C2B4682050027A527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47B2B4682050027A527 /* AppDelegate.swift */; };
 		AB6BE47E2B4682050027A527 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47D2B4682050027A527 /* SceneDelegate.swift */; };
 		AB6BE4802B4682050027A527 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47F2B4682050027A527 /* HomeViewController.swift */; };
 		AB6BE4832B4682050027A527 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6BE4812B4682050027A527 /* Home.storyboard */; };
 		AB6BE4852B4682060027A527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6BE4842B4682060027A527 /* Assets.xcassets */; };
-		AB6BE4882B4682060027A527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6BE4862B4682060027A527 /* LaunchScreen.storyboard */; };
 		AB6BE4932B4682060027A527 /* _3_NetflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE4922B4682060027A527 /* _3_NetflixTests.swift */; };
 		AB6BE49D2B4682060027A527 /* _3_NetflixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE49C2B4682060027A527 /* _3_NetflixUITests.swift */; };
 		AB6BE49F2B4682060027A527 /* _3_NetflixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE49E2B4682060027A527 /* _3_NetflixUITestsLaunchTests.swift */; };
@@ -49,13 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6BE4782B4682050027A527 /* 03_Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 03_Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6BE47B2B4682050027A527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6BE47D2B4682050027A527 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB6BE47F2B4682050027A527 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AB6BE4822B4682050027A527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		AB6BE4842B4682060027A527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB6BE4872B4682060027A527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6BE4892B4682060027A527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB6BE48E2B4682060027A527 /* 03_NetflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 03_NetflixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6BE4922B4682060027A527 /* _3_NetflixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _3_NetflixTests.swift; sourceTree = "<group>"; };
@@ -125,15 +125,15 @@
 		AB6BE47A2B4682050027A527 /* 03_Netflix */ = {
 			isa = PBXGroup;
 			children = (
+				5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */,
 				AB6BE47B2B4682050027A527 /* AppDelegate.swift */,
 				AB6BE47D2B4682050027A527 /* SceneDelegate.swift */,
+				AB6BE4842B4682060027A527 /* Assets.xcassets */,
+				AB6BE4892B4682060027A527 /* Info.plist */,
 				AB826E7F2B46A97B00460397 /* Network */,
 				AB6BE4B02B4683880027A527 /* Home VC */,
 				AB6BE4B12B4683910027A527 /* New Hot VC */,
 				AB6BE4AF2B4682DD0027A527 /* Tabbar */,
-				AB6BE4842B4682060027A527 /* Assets.xcassets */,
-				AB6BE4862B4682060027A527 /* LaunchScreen.storyboard */,
-				AB6BE4892B4682060027A527 /* Info.plist */,
 			);
 			path = 03_Netflix;
 			sourceTree = "<group>";
@@ -319,10 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB6BE4B52B4685470027A527 /* NewHot.storyboard in Resources */,
-				AB6BE4882B4682060027A527 /* LaunchScreen.storyboard in Resources */,
 				AB6BE4852B4682060027A527 /* Assets.xcassets in Resources */,
 				AB6BE4832B4682050027A527 /* Home.storyboard in Resources */,
 				AB826E7D2B46A74800460397 /* HomeCollectionViewCell.xib in Resources */,
+				5CED1A5B2B47D07D009397B1 /* LaunchScreen.storyboard in Resources */,
 				AB6BE4BD2B46A4D80027A527 /* HomeCell.xib in Resources */,
 				AB6BE4AE2B4682C80027A527 /* BaseTabBar.storyboard in Resources */,
 			);
@@ -403,14 +403,6 @@
 				AB6BE4822B4682050027A527 /* Base */,
 			);
 			name = Home.storyboard;
-			sourceTree = "<group>";
-		};
-		AB6BE4862B4682060027A527 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB6BE4872B4682060027A527 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -533,7 +525,6 @@
 		AB6BE4A32B4682060027A527 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -544,6 +535,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +552,6 @@
 		AB6BE4A42B4682060027A527 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -571,6 +562,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
