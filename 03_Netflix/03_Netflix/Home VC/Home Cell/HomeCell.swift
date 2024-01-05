@@ -22,6 +22,7 @@ class HomeCell: UITableViewCell {
         flowLayout.minimumInteritemSpacing = 10
         collectionView.collectionViewLayout = flowLayout
         collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
+        collectionView.backgroundColor = .black
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,7 +44,7 @@ class HomeCell: UITableViewCell {
 
 extension HomeCell:UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 125, height: 150)
+        CGSize(width: 125, height: 175)
     }
 }
 

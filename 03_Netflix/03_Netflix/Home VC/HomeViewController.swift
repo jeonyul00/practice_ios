@@ -19,11 +19,26 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
-        
+        tableView.register(HomeTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: "HomeTableViewHeaderView")
+        tableView.backgroundColor = .black
+
     }
 }
 
 extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
+    
+    // section
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeTableViewHeaderView") as! HomeTableViewHeaderView
+        headerView.title = MediaType(rawValue: section)?.title
+        return headerView
+    }
+    
+    // 헤더 높이
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
     // 로우
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
