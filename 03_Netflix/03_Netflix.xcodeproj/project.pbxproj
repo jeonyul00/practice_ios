@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C8734A92B4BA2CE00445737 /* NewHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A82B4BA2CE00445737 /* NewHotCell.swift */; };
 		5CED1A5B2B47D07D009397B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */; };
 		5CED1A5D2B47DF07009397B1 /* HomeTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CED1A5C2B47DF07009397B1 /* HomeTableViewHeaderView.swift */; };
 		AB6BE47C2B4682050027A527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47B2B4682050027A527 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C8734A82B4BA2CE00445737 /* NewHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotCell.swift; sourceTree = "<group>"; };
 		5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CED1A5C2B47DF07009397B1 /* HomeTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHeaderView.swift; sourceTree = "<group>"; };
 		AB6BE4782B4682050027A527 /* 03_Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 03_Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C8734A72B4BA2B000445737 /* New Hot Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C8734A82B4BA2CE00445737 /* NewHotCell.swift */,
+			);
+			path = "New Hot Cell";
+			sourceTree = "<group>";
+		};
 		5CED1A5E2B47DF15009397B1 /* Table Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		AB6BE4B12B4683910027A527 /* New Hot VC */ = {
 			isa = PBXGroup;
 			children = (
+				5C8734A72B4BA2B000445737 /* New Hot Cell */,
 				AB6BE4B22B4685380027A527 /* NewHotViewController.swift */,
 				AB6BE4B42B4685470027A527 /* NewHot.storyboard */,
 			);
@@ -360,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8734A92B4BA2CE00445737 /* NewHotCell.swift in Sources */,
 				AB6BE4802B4682050027A527 /* HomeViewController.swift in Sources */,
 				AB6BE4B32B4685380027A527 /* NewHotViewController.swift in Sources */,
 				AB826E812B46A9A200460397 /* MovieModel.swift in Sources */,
