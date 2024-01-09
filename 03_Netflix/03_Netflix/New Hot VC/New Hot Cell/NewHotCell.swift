@@ -13,7 +13,7 @@ class NewHotCell: UITableViewCell {
     var baseContainerView:UIView = {
         let baseView = UIView()
         baseView.translatesAutoresizingMaskIntoConstraints = false
-        baseView.backgroundColor = .systemGray6
+        baseView.backgroundColor = .black
         return baseView
     }()
     
@@ -27,7 +27,14 @@ class NewHotCell: UITableViewCell {
         let imgView = UIImageView()
         imgView.contentMode = .scaleAspectFill
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        // test
+        imgView.clipsToBounds = true
+        return imgView
+    }()
+    
+    var coverImgView:UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFill
         imgView.image = UIImage(systemName: "photo")
         imgView.clipsToBounds = true
         return imgView
@@ -37,6 +44,7 @@ class NewHotCell: UITableViewCell {
         let lbl = UILabel()
         lbl.numberOfLines = 0
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = .white
         return lbl
     }()
     
@@ -44,12 +52,14 @@ class NewHotCell: UITableViewCell {
         let lbl = UILabel()
         lbl.numberOfLines = 0
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = .white
         return lbl
     }()
     
     var dateLabel:UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = .white
         return lbl
     }()
     
@@ -62,12 +72,14 @@ class NewHotCell: UITableViewCell {
             settingTitle()
             settingDescription()
             requestThumbnail()
+            requsetCoverImg()
         }
     }
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.contentView.backgroundColor = .black
         // 뷰를 올리고나서 contranints 설정해야함
         self.contentView.addSubview(baseContainerView)
         
@@ -84,8 +96,39 @@ class NewHotCell: UITableViewCell {
         addDateLabel() // 날짜
         addTitleLabel() // 제목
         addDescriptionLabel() // 설명
+        addCoverImgWithSetAnchor() // 커버 이미지
     }
     
+    func moviePlay(){
+        // 현재 상태
+        if self.player.timeControlStatus != .playing {
+            self.player.play()
+            coverImgView.isHidden = true
+        }
+    }
+    
+    func movieStop() {
+        self.player.pause()
+        coverImgView.isHidden = false
+    }
+    
+    private func addCoverImgWithSetAnchor() {
+        movieContainerView.addSubview(coverImgView)
+        coverImgView.leftAnchor.constraint(equalTo: movieContainerView.leftAnchor).isActive = true
+        coverImgView.rightAnchor.constraint(equalTo: movieContainerView.rightAnchor).isActive = true
+        coverImgView.topAnchor.constraint(equalTo: movieContainerView.topAnchor).isActive = true
+        coverImgView.bottomAnchor.constraint(equalTo: movieContainerView.bottomAnchor).isActive = true
+    }
+    
+    private func requsetCoverImg(){
+        if let hasURL = movieResult?.artworkUrl {
+            NetworkLayer.request(urlString: hasURL) { img in
+                DispatchQueue.main.async {
+                    self.coverImgView.image = img
+                }
+            }
+        }
+    }
     
     private func requestThumbnail(){
         if let hasURL = movieResult?.artworkUrl {
@@ -123,8 +166,8 @@ class NewHotCell: UITableViewCell {
         if let previewURL =  movieResult?.previewUrl, let hasURL = URL(string: previewURL) {
             self.player = AVPlayer(url: hasURL)
             self.playerLayer.player = self.player
-            self.player.volume = 0
-            self.player.play()
+            self.player.volume = 0.1
+            // self.player.play()
         }
     }
     

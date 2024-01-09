@@ -10,6 +10,7 @@
 		5C8734A92B4BA2CE00445737 /* NewHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8734A82B4BA2CE00445737 /* NewHotCell.swift */; };
 		5CED1A5B2B47D07D009397B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */; };
 		5CED1A5D2B47DF07009397B1 /* HomeTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CED1A5C2B47DF07009397B1 /* HomeTableViewHeaderView.swift */; };
+		AB57E1BC2B4D0E9F00A5439A /* DateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57E1BB2B4D0E9F00A5439A /* DateHeaderView.swift */; };
 		AB6BE47C2B4682050027A527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47B2B4682050027A527 /* AppDelegate.swift */; };
 		AB6BE47E2B4682050027A527 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47D2B4682050027A527 /* SceneDelegate.swift */; };
 		AB6BE4802B4682050027A527 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47F2B4682050027A527 /* HomeViewController.swift */; };
@@ -54,6 +55,7 @@
 		5C8734A82B4BA2CE00445737 /* NewHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotCell.swift; sourceTree = "<group>"; };
 		5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CED1A5C2B47DF07009397B1 /* HomeTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHeaderView.swift; sourceTree = "<group>"; };
+		AB57E1BB2B4D0E9F00A5439A /* DateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderView.swift; sourceTree = "<group>"; };
 		AB6BE4782B4682050027A527 /* 03_Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 03_Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6BE47B2B4682050027A527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6BE47D2B4682050027A527 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				5C8734A72B4BA2B000445737 /* New Hot Cell */,
 				AB6BE4B22B4685380027A527 /* NewHotViewController.swift */,
 				AB6BE4B42B4685470027A527 /* NewHot.storyboard */,
+				AB57E1BB2B4D0E9F00A5439A /* DateHeaderView.swift */,
 			);
 			path = "New Hot VC";
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				AB6BE4B32B4685380027A527 /* NewHotViewController.swift in Sources */,
 				AB826E812B46A9A200460397 /* MovieModel.swift in Sources */,
 				AB6BE4BC2B46A4D80027A527 /* HomeCell.swift in Sources */,
+				AB57E1BC2B4D0E9F00A5439A /* DateHeaderView.swift in Sources */,
 				AB6BE4AC2B4682B10027A527 /* MainTabbarViewController.swift in Sources */,
 				AB826E832B46ACDE00460397 /* NetworkLayer.swift in Sources */,
 				AB6BE4B72B468C0A0027A527 /* HomeNaviViewController.swift in Sources */,

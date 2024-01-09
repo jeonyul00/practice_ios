@@ -14,9 +14,20 @@ class MainTabbarViewController: UITabBarController {
         
         // home에 있는 viewController
         //        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        let newHotVC = UIStoryboard(name: "NewHot", bundle: nil).instantiateViewController(withIdentifier: "NewHotViewController") as! NewHotViewController
         // home에 있는 naviViewController
         let homeNaviVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeNaviViewController") as! HomeNaviViewController
+        let newHotVC = UIStoryboard(name: "NewHot", bundle: nil).instantiateViewController(withIdentifier: "NewHotViewController") as! NewHotViewController
+        // 코드로 네비로 감싸서 생성
+        let newHotnaviVC = UINavigationController(rootViewController: newHotVC)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        newHotnaviVC.navigationBar.standardAppearance = appearance
+        newHotnaviVC.navigationBar.scrollEdgeAppearance = appearance
+        newHotnaviVC.navigationBar.compactAppearance = appearance
+        newHotnaviVC.navigationBar.compactScrollEdgeAppearance = appearance
+        
+        // newHotnaviVC.navigationBar.topItem?.title = "new hot"
+        // newHotVC.navigationItem.title = "new hot" // 이거 안먹힘 왜? -> 이게 어디서 접근하는지 알아야함
         
         //        homeVC.tabBarItem.title = "home"
         //        homeVC.tabBarItem.image = UIImage(systemName: "house")
@@ -46,7 +57,7 @@ class MainTabbarViewController: UITabBarController {
         self.tabBar.standardAppearance = tabBarAppearance
         self.tabBar.scrollEdgeAppearance = tabBarAppearance
         
-        self.viewControllers = [homeNaviVC, newHotVC]
+        self.viewControllers = [homeNaviVC, newHotnaviVC]
     }
     
 }
