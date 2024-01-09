@@ -21,7 +21,23 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         tableView.register(HomeTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: "HomeTableViewHeaderView")
         tableView.backgroundColor = .black
-
+        registObserver()
+    }
+    
+    
+    // notification 옵저버 등록 -> 어딘가에서 신호를 주면 그 신호를 받을 수 있도록 관찰하고 있어야함
+    // 수신 준비: presentDetailVC라는 이름으로 포스팅이 발생되면 presentDetailVC를 호출
+    func registObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(presentDetailVC), name: NSNotification.Name("presentDetailVC"), object: nil)
+    }
+            
+    @objc func presentDetailVC(notification:Notification){
+        // notification: 포스트 할 때 전달됨
+        if let hasResult = notification.object as? MovieResult {
+            let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+            detailVC.movieResult = hasResult
+            present(detailVC, animated: true)
+        }
     }
 }
 
@@ -59,6 +75,7 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 175
     }
+    
     
 }
 

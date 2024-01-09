@@ -18,10 +18,19 @@ class NewHotViewController: UIViewController {
         }
     }
     
+    // 화면이 안나올 때
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        guard let visibleCells = newHotTableView.visibleCells as? [NewHotCell] else { return }
+           visibleCells.forEach { cell in
+               cell.movieStop()
+           }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         let lbl = UILabel()
         lbl.textColor = .white
         lbl.font = UIFont.boldSystemFont(ofSize: 18)
@@ -93,6 +102,14 @@ extension NewHotViewController:UITableViewDelegate, UITableViewDataSource {
             }
         }
         return headerView
+    }
+    
+    // 테이블 뷰를 눌렀을 때
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieResult =  movieModel?.results[indexPath.section]
+        let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        detailVC.movieResult = movieResult
+        present(detailVC, animated: true)
     }
 }
 

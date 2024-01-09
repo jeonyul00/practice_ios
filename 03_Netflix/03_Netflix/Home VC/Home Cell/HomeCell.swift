@@ -49,6 +49,14 @@ extension HomeCell:UICollectionViewDelegateFlowLayout {
 }
 
 extension HomeCell:UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    // 아이템을 눌렀을 때
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movieResult =  movieModel?.results[indexPath.row]
+        // notification 포스트
+        NotificationCenter.default.post(name: NSNotification.Name("presentDetailVC"), object: movieResult)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieModel?.resultCount ?? 0
     }
@@ -66,6 +74,6 @@ extension HomeCell:UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
     }
-        
+    
 }
 

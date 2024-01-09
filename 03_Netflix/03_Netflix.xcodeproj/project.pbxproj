@@ -11,6 +11,8 @@
 		5CED1A5B2B47D07D009397B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */; };
 		5CED1A5D2B47DF07009397B1 /* HomeTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CED1A5C2B47DF07009397B1 /* HomeTableViewHeaderView.swift */; };
 		AB57E1BC2B4D0E9F00A5439A /* DateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57E1BB2B4D0E9F00A5439A /* DateHeaderView.swift */; };
+		AB57E1C02B4D31CF00A5439A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57E1BE2B4D31CF00A5439A /* DetailViewController.swift */; };
+		AB57E1C12B4D31CF00A5439A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB57E1BF2B4D31CF00A5439A /* DetailViewController.xib */; };
 		AB6BE47C2B4682050027A527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47B2B4682050027A527 /* AppDelegate.swift */; };
 		AB6BE47E2B4682050027A527 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47D2B4682050027A527 /* SceneDelegate.swift */; };
 		AB6BE4802B4682050027A527 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE47F2B4682050027A527 /* HomeViewController.swift */; };
@@ -56,6 +58,8 @@
 		5CED1A5A2B47D07D009397B1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CED1A5C2B47DF07009397B1 /* HomeTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHeaderView.swift; sourceTree = "<group>"; };
 		AB57E1BB2B4D0E9F00A5439A /* DateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderView.swift; sourceTree = "<group>"; };
+		AB57E1BE2B4D31CF00A5439A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AB57E1BF2B4D31CF00A5439A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		AB6BE4782B4682050027A527 /* 03_Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 03_Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6BE47B2B4682050027A527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6BE47D2B4682050027A527 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			path = "Table Header";
 			sourceTree = "<group>";
 		};
+		AB57E1BD2B4D31A300A5439A /* Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				AB57E1BE2B4D31CF00A5439A /* DetailViewController.swift */,
+				AB57E1BF2B4D31CF00A5439A /* DetailViewController.xib */,
+			);
+			path = "Detail VC";
+			sourceTree = "<group>";
+		};
 		AB6BE46F2B4682050027A527 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 				AB6BE47D2B4682050027A527 /* SceneDelegate.swift */,
 				AB6BE4842B4682060027A527 /* Assets.xcassets */,
 				AB6BE4892B4682060027A527 /* Info.plist */,
+				AB57E1BD2B4D31A300A5439A /* Detail VC */,
 				AB826E7F2B46A97B00460397 /* Network */,
 				AB6BE4B02B4683880027A527 /* Home VC */,
 				AB6BE4B12B4683910027A527 /* New Hot VC */,
@@ -346,6 +360,7 @@
 				AB6BE4B52B4685470027A527 /* NewHot.storyboard in Resources */,
 				AB6BE4852B4682060027A527 /* Assets.xcassets in Resources */,
 				AB6BE4832B4682050027A527 /* Home.storyboard in Resources */,
+				AB57E1C12B4D31CF00A5439A /* DetailViewController.xib in Resources */,
 				AB826E7D2B46A74800460397 /* HomeCollectionViewCell.xib in Resources */,
 				5CED1A5B2B47D07D009397B1 /* LaunchScreen.storyboard in Resources */,
 				AB6BE4BD2B46A4D80027A527 /* HomeCell.xib in Resources */,
@@ -381,6 +396,7 @@
 				AB6BE4BC2B46A4D80027A527 /* HomeCell.swift in Sources */,
 				AB57E1BC2B4D0E9F00A5439A /* DateHeaderView.swift in Sources */,
 				AB6BE4AC2B4682B10027A527 /* MainTabbarViewController.swift in Sources */,
+				AB57E1C02B4D31CF00A5439A /* DetailViewController.swift in Sources */,
 				AB826E832B46ACDE00460397 /* NetworkLayer.swift in Sources */,
 				AB6BE4B72B468C0A0027A527 /* HomeNaviViewController.swift in Sources */,
 				5CED1A5D2B47DF07009397B1 /* HomeTableViewHeaderView.swift in Sources */,
