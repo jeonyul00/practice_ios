@@ -13,6 +13,12 @@ import UIKit
  movie, podcast, music, musicVideo, audiobook, shortFilm, tvShow, software, ebook, all
  */
 
+enum MyError:Error {
+    case badURL
+    case networkError
+    case badData
+}
+
 class NetworkLayer {
     
     static func request(urlString:String, completion: @escaping (UIImage?)->Void) {
@@ -22,6 +28,17 @@ class NetworkLayer {
                 let image = UIImage(data: hasData)
                 completion(image)
             }.resume()
+        }
+    }
+    
+    static func requestAsyncAwait(urlString:String) async -> Result<UIImage?,Error> {
+        guard let url = URL(string: urlString) else { return .failure(MyError.badURL) }
+        do{
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let image = UIImage(data: data) else { return .failure(MyError.badData) }
+            return .success(image)
+        }catch{
+            return .failure(MyError.networkError)
         }
     }
     

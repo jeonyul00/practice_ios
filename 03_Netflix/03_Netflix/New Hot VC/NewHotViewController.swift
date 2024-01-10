@@ -23,9 +23,9 @@ class NewHotViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         guard let visibleCells = newHotTableView.visibleCells as? [NewHotCell] else { return }
-           visibleCells.forEach { cell in
-               cell.movieStop()
-           }
+        visibleCells.forEach { cell in
+            cell.movieStop()
+        }
         
     }
     
@@ -85,21 +85,18 @@ extension NewHotViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateHeaderView") as! DateHeaderView
         headerView.backgroundColor = .black
+        
         if let dateString = movieModel?.results[section].releaseDate {
-            let formatter = ISO8601DateFormatter()
-            if let date = formatter.date(from:dateString) {
-                let myFormatter = DateFormatter()
-                myFormatter.dateFormat = "M월\ndd"
-                let dateString = myFormatter.string(from: date)
-                let attributedString = NSMutableAttributedString(string: dateString)
-                let monthRange = NSRange(location: 0, length: dateString.count - 2)
-                let dayRange = NSRange(location: dateString.count - 2, length: 2)
-                attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 14), range: monthRange)
-                attributedString.addAttribute(.foregroundColor, value: UIColor.lightGray, range: monthRange)
-                attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 24), range: dayRange)
-                attributedString.addAttribute(.foregroundColor, value: UIColor.white,  range: dayRange)
-                headerView.dateAttributeString = attributedString
-            }
+            let convertedDateString = CommonUtil.iso8601(date: dateString, format: "M월\ndd")
+            let attributedString = NSMutableAttributedString(string: convertedDateString)
+            let monthRange = NSRange(location: 0, length: convertedDateString.count - 2)
+            let dayRange = NSRange(location: convertedDateString.count - 2, length: 2)
+            attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 14), range: monthRange)
+            attributedString.addAttribute(.foregroundColor, value: UIColor.lightGray, range: monthRange)
+            attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 24), range: dayRange)
+            attributedString.addAttribute(.foregroundColor, value: UIColor.white,  range: dayRange)
+            headerView.dateAttributeString = attributedString
+            
         }
         return headerView
     }
@@ -118,19 +115,21 @@ extension NewHotViewController:UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // visivleCell: 화면에 보이는 셀
         guard let visibleCells = newHotTableView.visibleCells as? [NewHotCell] else { return }
+        playOrStop(positionY: 55, visibleCells: visibleCells)
+    }
+    
+    
+    func playOrStop<T>(positionY:CGFloat, visibleCells:[T]) where T : UIView & PlayOrStopType {
         guard let firstCell = visibleCells.first else { return }
         if visibleCells.count == 1 {
             // 첫번째 셀 플레이
             firstCell.moviePlay()
             return
         }
-        
         let secondCell = visibleCells[1]
-        
         // 포지션 컨버트
         let firstCellPositionY = newHotTableView.convert(firstCell.frame.origin, to: self.view).y
-        
-        if firstCellPositionY > 60 {
+        if firstCellPositionY > positionY {
             // 첫번째 셀 플레이
             firstCell.moviePlay()
             // 나머지 정지
@@ -149,6 +148,8 @@ extension NewHotViewController:UIScrollViewDelegate {
                 cell.movieStop()
             }
         }
+        
+        
     }
     
 }

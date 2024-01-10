@@ -65,11 +65,23 @@ extension HomeCell:UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
         
         if let url = self.movieModel?.results[indexPath.item].artworkUrl {
-            NetworkLayer.request(urlString: url) { img in
-                DispatchQueue.main.async {
-                    cell.coverImageView.image = img
+            //            NetworkLayer.request(urlString: url) { img in
+            //                DispatchQueue.main.async {
+            //                    cell.coverImageView.image = img
+            //                }
+            //            }
+            
+            Task {
+                let result = await NetworkLayer.requestAsyncAwait(urlString: url)
+                switch result {
+                    // return 되는 값을 받을 때
+                case .success(let image):
+                    cell.coverImageView.image = image
+                case .failure(let error):
+                    print(error)
                 }
             }
+            
         }
         
         return cell

@@ -34,6 +34,7 @@
 		AB826E812B46A9A200460397 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB826E802B46A9A200460397 /* MovieModel.swift */; };
 		AB826E832B46ACDE00460397 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB826E822B46ACDE00460397 /* NetworkLayer.swift */; };
 		AB826E852B46B34300460397 /* TypeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB826E842B46B34300460397 /* TypeInfo.swift */; };
+		AB83D3AC2B4E37C700E6B2B9 /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83D3AB2B4E37C700E6B2B9 /* CommonUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		AB826E802B46A9A200460397 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		AB826E822B46ACDE00460397 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		AB826E842B46B34300460397 /* TypeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeInfo.swift; sourceTree = "<group>"; };
+		AB83D3AB2B4E37C700E6B2B9 /* CommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				AB6BE47D2B4682050027A527 /* SceneDelegate.swift */,
 				AB6BE4842B4682060027A527 /* Assets.xcassets */,
 				AB6BE4892B4682060027A527 /* Info.plist */,
+				AB83D3AB2B4E37C700E6B2B9 /* CommonUtil.swift */,
 				AB57E1BD2B4D31A300A5439A /* Detail VC */,
 				AB826E7F2B46A97B00460397 /* Network */,
 				AB6BE4B02B4683880027A527 /* Home VC */,
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C8734A92B4BA2CE00445737 /* NewHotCell.swift in Sources */,
+				AB83D3AC2B4E37C700E6B2B9 /* CommonUtil.swift in Sources */,
 				AB6BE4802B4682050027A527 /* HomeViewController.swift in Sources */,
 				AB6BE4B32B4685380027A527 /* NewHotViewController.swift in Sources */,
 				AB826E812B46A9A200460397 /* MovieModel.swift in Sources */,

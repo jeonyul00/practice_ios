@@ -8,7 +8,12 @@
 import UIKit
 import AVKit
 
-class NewHotCell: UITableViewCell {
+protocol PlayOrStopType {
+    func moviePlay()
+    func movieStop()
+}
+
+class NewHotCell: UITableViewCell, PlayOrStopType {
     
     var baseContainerView:UIView = {
         let baseView = UIView()
@@ -152,13 +157,7 @@ class NewHotCell: UITableViewCell {
     private func settingDate() {
         // 국제 표준 시간으로 들어옴 -> 포맷 변경
         if let hasDate =  movieResult?.releaseDate {
-            let formmater = ISO8601DateFormatter()
-            if let isoDate =  formmater.date(from: hasDate) {
-                let myFormatter = DateFormatter()
-                myFormatter.dateFormat = "yyyy-MM-dd"
-                let dateString = myFormatter.string(from: isoDate)
-                self.dateLabel.text = dateString
-            }
+            self.dateLabel.text = CommonUtil.iso8601(date: hasDate, format: "yyyy-MM-dd")
         }
     }
     
