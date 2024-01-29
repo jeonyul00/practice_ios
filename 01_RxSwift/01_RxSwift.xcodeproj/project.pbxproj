@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CC159A82B67562000D486D0 /* DocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC159A72B67562000D486D0 /* DocViewController.swift */; };
 		7A76E5B36DB8712251B590F7 /* Pods_01_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB3482DE7E3D43B4181507C /* Pods_01_RxSwift.framework */; };
 		AB45235B2B620521007DB358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45235A2B620521007DB358 /* AppDelegate.swift */; };
 		AB45235D2B620521007DB358 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45235C2B620521007DB358 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		047551BF7CAE2B08252BB2DA /* Pods-01_RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-01_RxSwift/Pods-01_RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		5CC159A72B67562000D486D0 /* DocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocViewController.swift; sourceTree = "<group>"; };
 		7CB3482DE7E3D43B4181507C /* Pods_01_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_01_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9499F593DD9098B3C0153BF9 /* Pods-01_RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-01_RxSwift.release.xcconfig"; path = "Target Support Files/Pods-01_RxSwift/Pods-01_RxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AB4523572B620521007DB358 /* 01_RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 01_RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +31,7 @@
 		AB4523632B620522007DB358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB4523662B620522007DB358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB4523682B620522007DB358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB6EADA22B62113E008DC191 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AB6EADA22B62113E008DC191 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				AB45235A2B620521007DB358 /* AppDelegate.swift */,
 				AB45235C2B620521007DB358 /* SceneDelegate.swift */,
 				AB45235E2B620521007DB358 /* ViewController.swift */,
+				5CC159A72B67562000D486D0 /* DocViewController.swift */,
 				AB4523602B620521007DB358 /* Main.storyboard */,
 				AB4523632B620522007DB358 /* Assets.xcassets */,
 				AB4523652B620522007DB358 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 				AB45235F2B620521007DB358 /* ViewController.swift in Sources */,
 				AB45235B2B620521007DB358 /* AppDelegate.swift in Sources */,
 				AB45235D2B620521007DB358 /* SceneDelegate.swift in Sources */,
+				5CC159A82B67562000D486D0 /* DocViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
