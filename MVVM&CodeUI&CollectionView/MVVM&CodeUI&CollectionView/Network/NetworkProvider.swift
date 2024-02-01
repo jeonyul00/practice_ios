@@ -11,7 +11,7 @@ import Foundation
 final class NetworkProvider {
     private let endPoint:String
     
-    init(endPoint: String) {
+    init() {
         self.endPoint = "https://api.themoviedb.org/3"
     }
     
