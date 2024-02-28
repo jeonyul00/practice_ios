@@ -10,18 +10,18 @@ import Foundation
 
 
 class NetworkManager {
-    private let networkService = NetworkService()
-    
-    func fetchSomeData(completion: @escaping ([PostModel]?, Error?) -> Void) {
-        networkService.request(endpoint: "https://jsonplaceholder.typicode.com/posts", method: "GET", parameters: nil) { data, response, error in
-            guard let data = data, error == nil else {
-                completion(nil, error)
-                return
-            }
-            
-            // Parse JSON data
-            let decodedData = try? JSONDecoder().decode([PostModel].self, from: data)
-            completion(decodedData, nil)
-        }
-    }
+//    private let networkService = NetworkService()
+//    
+//    func fetchSomeData(completion: @escaping ([PostModel]?, Error?) -> Void) {
+//        networkService.request(endpoint: "https://jsonplaceholder.typicode.com/posts", method: "GET", parameters: nil) { data, response, error in
+//            guard let data = data, error == nil else {
+//                completion(nil, error)
+//                return
+//            }
+//            
+//            // Parse JSON data
+//            let decodedData = try? JSONDecoder().decode([PostModel].self, from: data)
+//            completion(decodedData, nil)
+//        }
+//    }
 }

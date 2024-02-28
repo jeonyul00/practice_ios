@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct Posts:Codable {
-    var results: [PostModel]
-}
-
-
 struct PostModel:Codable {
     var userId: Int
     var id: Int

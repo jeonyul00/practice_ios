@@ -7,24 +7,32 @@
 
 // 서버와의 실제 통신을 담당
 import Foundation
+import RxSwift
 
 
 class NetworkService {
     
-    func request(endpoint: String, method: String, parameters: [String: Any]?, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        guard let url = URL(string: endpoint) else { return }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = method
-        
-        if let parameters = parameters {
-            request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
+    func fetchPosts() -> Observable<[PostModel]> {
+        Observable.create { observer in
+            let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+            let task = URLSession.shared.dataTask(with: url) { data,_,error in
+                if let error = error {
+                    observer.onError(error)
+                    return
+                }
+                do{
+                    let decoded = try JSONDecoder().decode([PostModel].self, from: data!)
+                    observer.onNext(decoded)
+                } catch{
+                    observer.onError(error)
+                }
+                observer.onCompleted()
+            }
+            task.resume()
+            return Disposables.create {
+                task.cancel()
+            }
         }
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            completion(data, response, error)
-        }
-        task.resume()
     }
     
 }
