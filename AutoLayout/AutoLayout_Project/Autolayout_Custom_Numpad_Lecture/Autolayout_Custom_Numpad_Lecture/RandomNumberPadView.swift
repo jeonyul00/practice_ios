@@ -40,7 +40,7 @@ class RandomNumberPadView: UIView {
     
     private func makeStackView(rows: [[String]]) {
         // [[1,2,3], [4,5,6], [7,8,9], [done, 10, ⌫]]
-        var verticalStackView = UIStackView()
+        let verticalStackView = UIStackView()
         verticalStackView.axis = .vertical
         verticalStackView.spacing = 15
         verticalStackView.distribution = .fillEqually
