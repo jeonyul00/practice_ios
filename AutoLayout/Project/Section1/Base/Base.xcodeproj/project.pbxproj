@@ -13,6 +13,8 @@
 		5C41A0F92B9058E9003CE7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C41A0F72B9058E9003CE7F7 /* Main.storyboard */; };
 		5C41A0FB2B9058EA003CE7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C41A0FA2B9058EA003CE7F7 /* Assets.xcassets */; };
 		5C41A0FE2B9058EA003CE7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C41A0FC2B9058EA003CE7F7 /* LaunchScreen.storyboard */; };
+		5CF8E58E2B96F88900D22614 /* AlignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8E58D2B96F88900D22614 /* AlignViewController.swift */; };
+		5CF8E5902B97075500D22614 /* PriorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8E58F2B97075500D22614 /* PriorityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5C41A0FA2B9058EA003CE7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C41A0FD2B9058EA003CE7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C41A0FF2B9058EA003CE7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF8E58D2B96F88900D22614 /* AlignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignViewController.swift; sourceTree = "<group>"; };
+		5CF8E58F2B97075500D22614 /* PriorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				5C41A0F12B9058E9003CE7F7 /* AppDelegate.swift */,
 				5C41A0F32B9058E9003CE7F7 /* SceneDelegate.swift */,
 				5C41A0F52B9058E9003CE7F7 /* ViewController.swift */,
+				5CF8E58D2B96F88900D22614 /* AlignViewController.swift */,
+				5CF8E58F2B97075500D22614 /* PriorityViewController.swift */,
 				5C41A0F72B9058E9003CE7F7 /* Main.storyboard */,
 				5C41A0FA2B9058EA003CE7F7 /* Assets.xcassets */,
 				5C41A0FC2B9058EA003CE7F7 /* LaunchScreen.storyboard */,
@@ -140,7 +146,9 @@
 			files = (
 				5C41A0F62B9058E9003CE7F7 /* ViewController.swift in Sources */,
 				5C41A0F22B9058E9003CE7F7 /* AppDelegate.swift in Sources */,
+				5CF8E58E2B96F88900D22614 /* AlignViewController.swift in Sources */,
 				5C41A0F42B9058E9003CE7F7 /* SceneDelegate.swift in Sources */,
+				5CF8E5902B97075500D22614 /* PriorityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
