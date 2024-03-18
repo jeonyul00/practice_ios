@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C6FD3112BA80FCB003A1024 /* StackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6FD3102BA80FCB003A1024 /* StackViewViewController.swift */; };
 		5C731D202BA4106600D1AC28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C731D1F2BA4106600D1AC28 /* AppDelegate.swift */; };
 		5C731D222BA4106600D1AC28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C731D212BA4106600D1AC28 /* SceneDelegate.swift */; };
 		5C731D242BA4106600D1AC28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C731D232BA4106600D1AC28 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C6FD3102BA80FCB003A1024 /* StackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewViewController.swift; sourceTree = "<group>"; };
 		5C731D1C2BA4106600D1AC28 /* 2Uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C731D1F2BA4106600D1AC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C731D212BA4106600D1AC28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				5C731D232BA4106600D1AC28 /* ViewController.swift */,
 				5C7A766F2BA7D5990024989A /* ScrollViewViewController.swift */,
 				5C7A76712BA7DEF10024989A /* SizeClassViewController.swift */,
+				5C6FD3102BA80FCB003A1024 /* StackViewViewController.swift */,
 				5C731D252BA4106600D1AC28 /* Main.storyboard */,
 				5C731D282BA4106700D1AC28 /* Assets.xcassets */,
 				5C731D2A2BA4106700D1AC28 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 				5C731D202BA4106600D1AC28 /* AppDelegate.swift in Sources */,
 				5C7A76702BA7D5990024989A /* ScrollViewViewController.swift in Sources */,
 				5C731D222BA4106600D1AC28 /* SceneDelegate.swift in Sources */,
+				5C6FD3112BA80FCB003A1024 /* StackViewViewController.swift in Sources */,
 				5C7A76722BA7DEF10024989A /* SizeClassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
