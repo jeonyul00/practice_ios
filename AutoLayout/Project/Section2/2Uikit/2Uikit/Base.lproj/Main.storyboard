@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWQ-u8-Yg7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lgQ-5q-LQn">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
-        <!--Stack View View Controller-->
+        <!--View Controller-->
         <scene sceneID="p2q-4l-wBP">
             <objects>
-                <viewController storyboardIdentifier="StackViewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dWQ-u8-Yg7" customClass="StackViewViewController" customModule="_Uikit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dWQ-u8-Yg7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mrX-HA-P8f">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,6 +157,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6Z-QY-U6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="696"/>
+        </scene>
+        <!--Stack View View Controller-->
+        <scene sceneID="A6x-lD-Wyx">
+            <objects>
+                <viewController storyboardIdentifier="StackViewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lgQ-5q-LQn" customClass="StackViewViewController" customModule="_Uikit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Lb-09-Mur">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7T6-6l-vot"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLI-0N-yjk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="696"/>
         </scene>
         <!--Scroll View View Controller-->
         <scene sceneID="a4S-fc-jHo">
