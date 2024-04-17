@@ -25,6 +25,8 @@
 		5C7A767B2BA7DF9D0024989A /* food1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7A76762BA7DF9D0024989A /* food1.png */; };
 		5C7A767C2BA7DF9D0024989A /* food3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7A76772BA7DF9D0024989A /* food3.png */; };
 		5CCB26042BCF770B0008B3D2 /* TextInput2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB26032BCF770B0008B3D2 /* TextInput2ViewController.swift */; };
+		5CCB26062BCF9C090008B3D2 /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB26052BCF9C090008B3D2 /* BlurViewController.swift */; };
+		5CCB26082BCF9C840008B3D2 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB26072BCF9C840008B3D2 /* bg2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5C7A76762BA7DF9D0024989A /* food1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food1.png; path = "../../../../imgs/Lecture Images/food1.png"; sourceTree = "<group>"; };
 		5C7A76772BA7DF9D0024989A /* food3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food3.png; path = "../../../../imgs/Lecture Images/food3.png"; sourceTree = "<group>"; };
 		5CCB26032BCF770B0008B3D2 /* TextInput2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput2ViewController.swift; sourceTree = "<group>"; };
+		5CCB26052BCF9C090008B3D2 /* BlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
+		5CCB26072BCF9C840008B3D2 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = "../../../../imgs/Lecture Images/배경/bg2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				5C3DAE562BA9874600413323 /* ButtonViewController.swift */,
 				5C597BC02BCCF4E2002DF327 /* TextInputViewController.swift */,
 				5CCB26032BCF770B0008B3D2 /* TextInput2ViewController.swift */,
+				5CCB26052BCF9C090008B3D2 /* BlurViewController.swift */,
 				5C731D252BA4106600D1AC28 /* Main.storyboard */,
 				5C731D282BA4106700D1AC28 /* Assets.xcassets */,
 				5C731D2A2BA4106700D1AC28 /* LaunchScreen.storyboard */,
@@ -99,6 +104,7 @@
 				5C7A76742BA7DF9D0024989A /* food4.png */,
 				5C7A76752BA7DF9D0024989A /* food5.png */,
 				5C731D332BA4117600D1AC28 /* bgV1.png */,
+				5CCB26072BCF9C840008B3D2 /* bg2.png */,
 			);
 			path = 2Uikit;
 			sourceTree = "<group>";
@@ -164,6 +170,7 @@
 				5C7A76792BA7DF9D0024989A /* food4.png in Resources */,
 				5C731D2C2BA4106700D1AC28 /* LaunchScreen.storyboard in Resources */,
 				5C7A76782BA7DF9D0024989A /* food2.png in Resources */,
+				5CCB26082BCF9C840008B3D2 /* bg2.png in Resources */,
 				5C7A767C2BA7DF9D0024989A /* food3.png in Resources */,
 				5C7A767A2BA7DF9D0024989A /* food5.png in Resources */,
 				5C731D292BA4106700D1AC28 /* Assets.xcassets in Resources */,
@@ -183,6 +190,7 @@
 				5C731D242BA4106600D1AC28 /* ViewController.swift in Sources */,
 				5C3DAE572BA9874600413323 /* ButtonViewController.swift in Sources */,
 				5CCB26042BCF770B0008B3D2 /* TextInput2ViewController.swift in Sources */,
+				5CCB26062BCF9C090008B3D2 /* BlurViewController.swift in Sources */,
 				5C731D202BA4106600D1AC28 /* AppDelegate.swift in Sources */,
 				5C7A76702BA7D5990024989A /* ScrollViewViewController.swift in Sources */,
 				5C597BC12BCCF4E2002DF327 /* TextInputViewController.swift in Sources */,
