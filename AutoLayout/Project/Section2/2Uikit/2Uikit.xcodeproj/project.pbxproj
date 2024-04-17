@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3DAE572BA9874600413323 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3DAE562BA9874600413323 /* ButtonViewController.swift */; };
+		5C597BC12BCCF4E2002DF327 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C597BC02BCCF4E2002DF327 /* TextInputViewController.swift */; };
 		5C6FD3112BA80FCB003A1024 /* StackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6FD3102BA80FCB003A1024 /* StackViewViewController.swift */; };
 		5C731D202BA4106600D1AC28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C731D1F2BA4106600D1AC28 /* AppDelegate.swift */; };
 		5C731D222BA4106600D1AC28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C731D212BA4106600D1AC28 /* SceneDelegate.swift */; };
@@ -22,9 +24,12 @@
 		5C7A767A2BA7DF9D0024989A /* food5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7A76752BA7DF9D0024989A /* food5.png */; };
 		5C7A767B2BA7DF9D0024989A /* food1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7A76762BA7DF9D0024989A /* food1.png */; };
 		5C7A767C2BA7DF9D0024989A /* food3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7A76772BA7DF9D0024989A /* food3.png */; };
+		5CCB26042BCF770B0008B3D2 /* TextInput2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB26032BCF770B0008B3D2 /* TextInput2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C3DAE562BA9874600413323 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		5C597BC02BCCF4E2002DF327 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		5C6FD3102BA80FCB003A1024 /* StackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewViewController.swift; sourceTree = "<group>"; };
 		5C731D1C2BA4106600D1AC28 /* 2Uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C731D1F2BA4106600D1AC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		5C7A76752BA7DF9D0024989A /* food5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food5.png; path = "../../../../imgs/Lecture Images/food5.png"; sourceTree = "<group>"; };
 		5C7A76762BA7DF9D0024989A /* food1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food1.png; path = "../../../../imgs/Lecture Images/food1.png"; sourceTree = "<group>"; };
 		5C7A76772BA7DF9D0024989A /* food3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food3.png; path = "../../../../imgs/Lecture Images/food3.png"; sourceTree = "<group>"; };
+		5CCB26032BCF770B0008B3D2 /* TextInput2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 				5C7A766F2BA7D5990024989A /* ScrollViewViewController.swift */,
 				5C7A76712BA7DEF10024989A /* SizeClassViewController.swift */,
 				5C6FD3102BA80FCB003A1024 /* StackViewViewController.swift */,
+				5C3DAE562BA9874600413323 /* ButtonViewController.swift */,
+				5C597BC02BCCF4E2002DF327 /* TextInputViewController.swift */,
+				5CCB26032BCF770B0008B3D2 /* TextInput2ViewController.swift */,
 				5C731D252BA4106600D1AC28 /* Main.storyboard */,
 				5C731D282BA4106700D1AC28 /* Assets.xcassets */,
 				5C731D2A2BA4106700D1AC28 /* LaunchScreen.storyboard */,
@@ -172,8 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C731D242BA4106600D1AC28 /* ViewController.swift in Sources */,
+				5C3DAE572BA9874600413323 /* ButtonViewController.swift in Sources */,
+				5CCB26042BCF770B0008B3D2 /* TextInput2ViewController.swift in Sources */,
 				5C731D202BA4106600D1AC28 /* AppDelegate.swift in Sources */,
 				5C7A76702BA7D5990024989A /* ScrollViewViewController.swift in Sources */,
+				5C597BC12BCCF4E2002DF327 /* TextInputViewController.swift in Sources */,
 				5C731D222BA4106600D1AC28 /* SceneDelegate.swift in Sources */,
 				5C6FD3112BA80FCB003A1024 /* StackViewViewController.swift in Sources */,
 				5C7A76722BA7DEF10024989A /* SizeClassViewController.swift in Sources */,
@@ -336,6 +348,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,6 +379,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
