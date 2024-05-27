@@ -87,10 +87,6 @@
                             <barButtonItem image="bell" catalog="system" id="GET-Wa-kI5"/>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <connections>
-                        <outlet property="store" destination="Xo8-xv-lq4" id="dXj-QF-G9O"/>
-                        <outlet property="tableView" destination="cvO-Lg-n6D" id="tv6-85-sbN"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

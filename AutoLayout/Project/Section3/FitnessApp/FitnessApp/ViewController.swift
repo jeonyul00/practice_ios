@@ -9,57 +9,48 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var store: UILabel! {
-        didSet {
-            store.font = UIFont.systemFont(ofSize: 30)
-        }
-    }
-    @IBOutlet weak var tableView: UITableView!
-    var planList: [PlanList]?
+    let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        loadJsonData()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        registTableView()
     }
     
-    private func loadJsonData() {
-        guard let plans = plans else { return }
-        let decoder = JSONDecoder()
+    func registTableView(){
+        self.view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        //        tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        //        tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        //        tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        //        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ])
         
-        do {
-            planList = try decoder.decode([PlanList].self, from: plans)
-            tableView.reloadData()
-        } catch {
-            print(error.localizedDescription)
-        }
+        // tableView에 cell 등록, 0번 인덱스 -> cellClass
+        tableView.register(FitnessCodeCell.self, forCellReuseIdentifier: "FitnessCodeCell")
     }
-    
 }
 
-extension ViewController:UITableViewDataSource, UITableViewDelegate {
+
+extension ViewController:UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        planList?.count ?? 0
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FitnessCell", for: indexPath) as! FitnessCell
-        cell.plan = planList?[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FitnessCodeCell", for: indexPath) as! FitnessCodeCell
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 180
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
-        detailVC.selectedPlan = planList?[indexPath.row]
-        self.navigationController?.pushViewController(detailVC, animated: true)
-    }
 }
-
-
