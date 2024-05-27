@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCn-zS-081">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FitnessApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cvO-Lg-n6D">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="jk3-ye-Xlr">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo8-xv-lq4">
+                                            <rect key="frame" x="20" y="7.6666666666666661" width="353" height="28.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Xo8-xv-lq4" firstAttribute="leading" secondItem="jk3-ye-Xlr" secondAttribute="leading" constant="20" id="B4W-e1-TW9"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xo8-xv-lq4" secondAttribute="trailing" constant="20" id="Bw1-GX-Q7v"/>
+                                        <constraint firstItem="Xo8-xv-lq4" firstAttribute="centerY" secondItem="jk3-ye-Xlr" secondAttribute="centerY" id="TBj-lZ-jJY"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FitnessCell" rowHeight="224" id="y4f-DN-ht8" customClass="FitnessCell" customModule="FitnessApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="94" width="393" height="224"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y4f-DN-ht8" id="aHA-fU-eqI">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="224"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fitness12.png" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-tj-EKd">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="204"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKV-PF-qjd">
+                                                    <rect key="frame" x="40" y="155" width="333" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TKV-PF-qjd" firstAttribute="leading" secondItem="EPp-tj-EKd" secondAttribute="leading" constant="20" id="6oz-dM-QcD"/>
+                                                <constraint firstAttribute="trailing" secondItem="EPp-tj-EKd" secondAttribute="trailing" constant="20" id="Cr2-X1-XsZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="EPp-tj-EKd" secondAttribute="bottom" constant="20" id="IXc-ez-jeU"/>
+                                                <constraint firstItem="EPp-tj-EKd" firstAttribute="leading" secondItem="aHA-fU-eqI" secondAttribute="leading" constant="20" id="ZyY-9X-S3J"/>
+                                                <constraint firstItem="EPp-tj-EKd" firstAttribute="bottom" secondItem="TKV-PF-qjd" secondAttribute="bottom" constant="20" id="tMO-FV-dhW"/>
+                                                <constraint firstItem="EPp-tj-EKd" firstAttribute="trailing" secondItem="TKV-PF-qjd" secondAttribute="trailing" id="ueZ-hn-D1t"/>
+                                                <constraint firstItem="EPp-tj-EKd" firstAttribute="top" secondItem="aHA-fU-eqI" secondAttribute="top" id="wVB-tD-DGQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bgImageView" destination="EPp-tj-EKd" id="92V-Sj-1Ek"/>
+                                            <outlet property="fitnessTitle" destination="TKV-PF-qjd" id="RH9-0L-zEP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cvO-Lg-n6D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4nA-jQ-KTa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cvO-Lg-n6D" secondAttribute="bottom" id="EJA-cc-hrA"/>
+                            <constraint firstItem="cvO-Lg-n6D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jZs-pw-H4C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cvO-Lg-n6D" secondAttribute="trailing" id="l6A-Tt-wNa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="277-Xs-ZB5">
+                        <rightBarButtonItems>
+                            <barButtonItem image="person.fill" catalog="system" id="Rzh-pa-BEq"/>
+                            <barButtonItem image="bell" catalog="system" id="GET-Wa-kI5"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="store" destination="Xo8-xv-lq4" id="dXj-QF-G9O"/>
+                        <outlet property="tableView" destination="cvO-Lg-n6D" id="tv6-85-sbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.885496183206" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lmT-d8-pgN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JCn-zS-081" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KhG-nI-PDg">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Fx-vh-27E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9d-pX-2A8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="fitness12.png" width="900" height="1350"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
