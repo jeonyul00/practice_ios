@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CA131D82C08240400FDB307 /* PlanDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA131D72C08240400FDB307 /* PlanDataModel.swift */; };
+		5CA131DD2C084F6600FDB307 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA131DC2C084F6600FDB307 /* DetailViewController.swift */; };
 		5CBAF9EF2C042E2600E69B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAF9EE2C042E2600E69B81 /* AppDelegate.swift */; };
 		5CBAF9F12C042E2600E69B81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAF9F02C042E2600E69B81 /* SceneDelegate.swift */; };
 		5CBAF9F32C042E2600E69B81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAF9F22C042E2600E69B81 /* ViewController.swift */; };
@@ -16,14 +18,16 @@
 		5CBAFA032C042F1F00E69B81 /* Fitness in Resources */ = {isa = PBXBuildFile; fileRef = 5CBAFA022C042F1F00E69B81 /* Fitness */; };
 		5CBAFA052C042F7E00E69B81 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAFA042C042F7E00E69B81 /* DataModel.swift */; };
 		5CBAFA072C043D4A00E69B81 /* FitnessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAFA062C043D4A00E69B81 /* FitnessCell.swift */; };
-		5CBAFA0A2C04524A00E69B81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAFA082C04524A00E69B81 /* DetailViewController.swift */; };
-		5CBAFA0B2C04524A00E69B81 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBAFA092C04524A00E69B81 /* DetailViewController.xib */; };
+		5CBAFA0A2C04524A00E69B81 /* StoryboardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAFA082C04524A00E69B81 /* StoryboardDetailViewController.swift */; };
+		5CBAFA0B2C04524A00E69B81 /* _DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBAFA092C04524A00E69B81 /* _DetailViewController.xib */; };
 		5CBAFA0D2C045C5300E69B81 /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAFA0C2C045C5300E69B81 /* StoryboardViewController.swift */; };
 		5CBAFA0F2C045DC900E69B81 /* HomeNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAFA0E2C045DC900E69B81 /* HomeNaviViewController.swift */; };
 		5CBAFA112C04712400E69B81 /* FitnessCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAFA102C04712400E69B81 /* FitnessCodeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CA131D72C08240400FDB307 /* PlanDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDataModel.swift; sourceTree = "<group>"; };
+		5CA131DC2C084F6600FDB307 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5CBAF9EB2C042E2600E69B81 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBAF9EE2C042E2600E69B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CBAF9F02C042E2600E69B81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,8 +39,8 @@
 		5CBAFA022C042F1F00E69B81 /* Fitness */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fitness; path = "../../../../imgs/Lecture Images/Fitness"; sourceTree = "<group>"; };
 		5CBAFA042C042F7E00E69B81 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		5CBAFA062C043D4A00E69B81 /* FitnessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCell.swift; sourceTree = "<group>"; };
-		5CBAFA082C04524A00E69B81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		5CBAFA092C04524A00E69B81 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		5CBAFA082C04524A00E69B81 /* StoryboardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardDetailViewController.swift; sourceTree = "<group>"; };
+		5CBAFA092C04524A00E69B81 /* _DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = _DetailViewController.xib; sourceTree = "<group>"; };
 		5CBAFA0C2C045C5300E69B81 /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 		5CBAFA0E2C045DC900E69B81 /* HomeNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviViewController.swift; sourceTree = "<group>"; };
 		5CBAFA102C04712400E69B81 /* FitnessCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCodeCell.swift; sourceTree = "<group>"; };
@@ -53,6 +57,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CA131D92C082BE800FDB307 /* chapter1 */ = {
+			isa = PBXGroup;
+			children = (
+				5CBAFA082C04524A00E69B81 /* StoryboardDetailViewController.swift */,
+				5CBAFA092C04524A00E69B81 /* _DetailViewController.xib */,
+				5CBAFA0C2C045C5300E69B81 /* StoryboardViewController.swift */,
+				5CBAF9F42C042E2600E69B81 /* Main.storyboard */,
+				5CBAFA042C042F7E00E69B81 /* DataModel.swift */,
+			);
+			path = chapter1;
+			sourceTree = "<group>";
+		};
+		5CA131DA2C082C1E00FDB307 /* chapter2 */ = {
+			isa = PBXGroup;
+			children = (
+				5CBAFA062C043D4A00E69B81 /* FitnessCell.swift */,
+				5CA131D72C08240400FDB307 /* PlanDataModel.swift */,
+				5CBAFA0E2C045DC900E69B81 /* HomeNaviViewController.swift */,
+				5CBAF9F22C042E2600E69B81 /* ViewController.swift */,
+				5CBAFA102C04712400E69B81 /* FitnessCodeCell.swift */,
+				5CA131DC2C084F6600FDB307 /* DetailViewController.swift */,
+			);
+			path = chapter2;
+			sourceTree = "<group>";
+		};
+		5CA131DB2C082C8E00FDB307 /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		5CBAF9E22C042E2600E69B81 = {
 			isa = PBXGroup;
 			children = (
@@ -72,18 +108,12 @@
 		5CBAF9ED2C042E2600E69B81 /* FitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				5CBAF9F72C042E2700E69B81 /* Assets.xcassets */,
 				5CBAF9EE2C042E2600E69B81 /* AppDelegate.swift */,
 				5CBAF9F02C042E2600E69B81 /* SceneDelegate.swift */,
-				5CBAFA0E2C045DC900E69B81 /* HomeNaviViewController.swift */,
-				5CBAF9F22C042E2600E69B81 /* ViewController.swift */,
-				5CBAFA102C04712400E69B81 /* FitnessCodeCell.swift */,
-				5CBAFA0C2C045C5300E69B81 /* StoryboardViewController.swift */,
-				5CBAFA082C04524A00E69B81 /* DetailViewController.swift */,
-				5CBAFA092C04524A00E69B81 /* DetailViewController.xib */,
-				5CBAFA062C043D4A00E69B81 /* FitnessCell.swift */,
-				5CBAFA042C042F7E00E69B81 /* DataModel.swift */,
-				5CBAF9F42C042E2600E69B81 /* Main.storyboard */,
-				5CBAF9F72C042E2700E69B81 /* Assets.xcassets */,
+				5CA131DB2C082C8E00FDB307 /* common */,
+				5CA131D92C082BE800FDB307 /* chapter1 */,
+				5CA131DA2C082C1E00FDB307 /* chapter2 */,
 				5CBAFA022C042F1F00E69B81 /* Fitness */,
 				5CBAF9F92C042E2700E69B81 /* LaunchScreen.storyboard */,
 				5CBAF9FC2C042E2700E69B81 /* Info.plist */,
@@ -151,7 +181,7 @@
 			files = (
 				5CBAF9FB2C042E2700E69B81 /* LaunchScreen.storyboard in Resources */,
 				5CBAF9F82C042E2700E69B81 /* Assets.xcassets in Resources */,
-				5CBAFA0B2C04524A00E69B81 /* DetailViewController.xib in Resources */,
+				5CBAFA0B2C04524A00E69B81 /* _DetailViewController.xib in Resources */,
 				5CBAF9F62C042E2600E69B81 /* Main.storyboard in Resources */,
 				5CBAFA032C042F1F00E69B81 /* Fitness in Resources */,
 			);
@@ -164,11 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA131DD2C084F6600FDB307 /* DetailViewController.swift in Sources */,
 				5CBAF9F32C042E2600E69B81 /* ViewController.swift in Sources */,
 				5CBAFA052C042F7E00E69B81 /* DataModel.swift in Sources */,
+				5CA131D82C08240400FDB307 /* PlanDataModel.swift in Sources */,
 				5CBAFA072C043D4A00E69B81 /* FitnessCell.swift in Sources */,
 				5CBAFA112C04712400E69B81 /* FitnessCodeCell.swift in Sources */,
-				5CBAFA0A2C04524A00E69B81 /* DetailViewController.swift in Sources */,
+				5CBAFA0A2C04524A00E69B81 /* StoryboardDetailViewController.swift in Sources */,
 				5CBAF9EF2C042E2600E69B81 /* AppDelegate.swift in Sources */,
 				5CBAFA0F2C045DC900E69B81 /* HomeNaviViewController.swift in Sources */,
 				5CBAFA0D2C045C5300E69B81 /* StoryboardViewController.swift in Sources */,

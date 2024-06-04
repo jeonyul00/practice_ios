@@ -21,7 +21,7 @@ class HomeNaviViewController: UINavigationController {
         let btn2 = UIBarButtonItem(image: UIImage(systemName: "trash.circle"), style: .done, target: self, action: #selector(pressTrash))
         self.navigationBar.topItem?.rightBarButtonItems = [btn1, btn2]
         
-        let barAppearance = UINavigationBarAppearance() // 탑 바 포함 위로 다
+        let barAppearance = UINavigationBarAppearance() // 탑top 바 포함 위로 다
         
         self.navigationBar.standardAppearance = barAppearance
         self.navigationBar.scrollEdgeAppearance = barAppearance

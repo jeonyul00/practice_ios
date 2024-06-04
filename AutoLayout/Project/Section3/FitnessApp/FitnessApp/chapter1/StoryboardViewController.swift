@@ -27,7 +27,6 @@ class StoryboardViewController: UIViewController {
     private func loadJsonData() {
         guard let plans = plans else { return }
         let decoder = JSONDecoder()
-        
         do {
             planList = try decoder.decode([PlanList].self, from: plans)
             tableView.reloadData()
@@ -57,7 +56,7 @@ extension StoryboardViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
-        detailVC.selectedPlan = planList?[indexPath.row]
+        // detailVC.selectedPlan = planList?[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

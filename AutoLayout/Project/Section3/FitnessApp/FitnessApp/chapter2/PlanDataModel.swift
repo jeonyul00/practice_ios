@@ -1,11 +1,11 @@
 //
-//  DataModel.swift
+//  PlanDataModel.swift
 //  FitnessApp
 //
-//  Created by 전율 on 2024/05/27.
+//  Created by 전율 on 2024/05/30.
 //
 
-import UIKit
+import Foundation
 
 let plans =
  """
@@ -54,6 +54,7 @@ let plans =
    ]
  
 """.data(using: .utf8)
+
 
 struct PlanList: Codable {
     let planType: String
