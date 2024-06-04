@@ -75,11 +75,32 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        
+        let barAppearance = UINavigationBarAppearance()
+        // 백그라운드 투명하게
+        barAppearance.configureWithTransparentBackground()
+        
+        barAppearance.setBackIndicatorImage(UIImage(systemName: "chevron.backward")?.withTintColor(.white, renderingMode: .alwaysOriginal), transitionMaskImage: UIImage(systemName: "chevron.backward")?.withTintColor(.white, renderingMode: .alwaysOriginal))
+        
+        self.navigationController?.navigationBar.compactAppearance = barAppearance
+        self.navigationController?.navigationBar.standardAppearance = barAppearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
+        self.navigationController?.navigationBar.compactScrollEdgeAppearance = barAppearance
+        
+        let itemAppearnce = UIBarButtonItemAppearance()
+        itemAppearnce.normal.titleTextAttributes = [.foregroundColor:UIColor.white]
+        self.navigationController?.navigationBar.compactAppearance?.backButtonAppearance = itemAppearnce
+        self.navigationController?.navigationBar.standardAppearance.backButtonAppearance = itemAppearnce
+        self.navigationController?.navigationBar.scrollEdgeAppearance?.backButtonAppearance = itemAppearnce
+        self.navigationController?.navigationBar.compactScrollEdgeAppearance?.backButtonAppearance = itemAppearnce
+        
         leftButton.configuration = capsultButtonConfig("left")
         rightButton.configuration = capsultButtonConfig("right")
+        
         configBG()
         configLabels()
         configButtons()
+        
     }
     
     func configButtons() {

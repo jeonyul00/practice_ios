@@ -69,13 +69,13 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-//        let selectedPlan = planList?[indexPath.row]
-//        let imgName = selectedPlan?.imageName ?? ""
-//        let filePath = Bundle.main.path(forResource: "Fitness/\(imgName)", ofType: nil) ?? ""
+        //        let selectedPlan = planList?[indexPath.row]
+        //        let imgName = selectedPlan?.imageName ?? ""
+        //        let filePath = Bundle.main.path(forResource: "Fitness/\(imgName)", ofType: nil) ?? ""
         vc.selectedPlan = planList?[indexPath.row]
-//        vc.BGImageView.image = UIImage(named: filePath)
-//        vc.planTitle.text = selectedPlan?.planType
-//        vc.planDescription.text = selectedPlan?.description
+        //        vc.BGImageView.image = UIImage(named: filePath)
+        //        vc.planTitle.text = selectedPlan?.planType
+        //        vc.planDescription.text = selectedPlan?.description
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

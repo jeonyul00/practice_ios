@@ -11,6 +11,7 @@ class HomeNaviViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        UINavigationBar.appearance().tintColor = .white // 전역 설정
     }
     
     override func viewWillAppear(_ animated: Bool) {
