@@ -11,7 +11,11 @@ import MapKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    let sheetVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SheetViewController") as! SheetViewController
+    // let sheetVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SheetViewController") as! SheetViewController
+    let sheetVC = SheetCodeViewController()
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,9 @@ class ViewController: UIViewController {
         
         makePin() // pin
         
+        // 클로저
+        sheetVC.closure = { [weak self] annotation in self?.mapView.addAnnotation(annotation) }
+        
         // 시트 못없애도록 (시트를 내려도 없애지 못함)
         sheetVC.isModalInPresentation = true
         
@@ -54,8 +61,7 @@ class ViewController: UIViewController {
             sheet.selectedDetentIdentifier = smallDetent.identifier
             // 백그라운드 지도 컨트롤 가능하도록 설정 => .large 사이즈 이하까지는 (언딘드하겠다 == 어둡게하지 않겠다.) 컨트롤을 할 수 있도록 하겠다
             sheet.largestUndimmedDetentIdentifier = .large
-            
-            
+                        
         }
         
         self.present(sheetVC, animated: true)
@@ -68,5 +74,7 @@ class ViewController: UIViewController {
 extension ViewController:MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
         sheetVC.pinTitle.text = annotation.title ?? ""
+        sheetVC.pinSubtitle.text  = annotation.subtitle ?? ""
+    
     }
 }
