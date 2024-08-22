@@ -15,6 +15,7 @@
 		AB1FF32E2B6B2458000DBACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1FF32C2B6B2458000DBACC /* LaunchScreen.storyboard */; };
 		AB7F4D322C77151000545307 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F4D312C77151000545307 /* Const.swift */; };
 		AB7F4D352C77177300545307 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F4D342C77177300545307 /* TV.swift */; };
+		AB7F4D372C77240300545307 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F4D362C77240300545307 /* Movie.swift */; };
 		ED57131F06A530779BD2A2BF /* Pods_MVVM_CodeUI_CollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E4901150771FB951676EEA /* Pods_MVVM_CodeUI_CollectionView.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		AB1FF32F2B6B2458000DBACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7F4D312C77151000545307 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		AB7F4D342C77177300545307 /* TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
+		AB7F4D362C77240300545307 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				AB7F4D342C77177300545307 /* TV.swift */,
+				AB7F4D362C77240300545307 /* Movie.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				AB1FF3262B6B2457000DBACC /* ViewController.swift in Sources */,
 				AB7F4D322C77151000545307 /* Const.swift in Sources */,
+				AB7F4D372C77240300545307 /* Movie.swift in Sources */,
 				AB1FF3222B6B2457000DBACC /* AppDelegate.swift in Sources */,
 				AB7F4D352C77177300545307 /* TV.swift in Sources */,
 				AB1FF3242B6B2457000DBACC /* SceneDelegate.swift in Sources */,
