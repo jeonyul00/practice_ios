@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct TVListModel: Decodable {
+    let page: Int
+    let result:[TV]
+}
+
 struct TV: Decodable {
     let name: String
     let overview: String

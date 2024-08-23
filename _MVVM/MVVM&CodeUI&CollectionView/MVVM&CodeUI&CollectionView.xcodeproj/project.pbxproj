@@ -16,6 +16,11 @@
 		AB7F4D322C77151000545307 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F4D312C77151000545307 /* Const.swift */; };
 		AB7F4D352C77177300545307 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F4D342C77177300545307 /* TV.swift */; };
 		AB7F4D372C77240300545307 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F4D362C77240300545307 /* Movie.swift */; };
+		ABC253712C7820100059055B /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC253702C7820100059055B /* MovieResult.swift */; };
+		ABC253732C7824210059055B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC253722C7824210059055B /* Network.swift */; };
+		ABC253752C7827C40059055B /* TVNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC253742C7827C40059055B /* TVNetwork.swift */; };
+		ABC253772C7829710059055B /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC253762C7829710059055B /* MovieNetwork.swift */; };
+		ABC253792C78300F0059055B /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC253782C78300F0059055B /* NetworkProvider.swift */; };
 		ED57131F06A530779BD2A2BF /* Pods_MVVM_CodeUI_CollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E4901150771FB951676EEA /* Pods_MVVM_CodeUI_CollectionView.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +39,11 @@
 		AB7F4D312C77151000545307 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		AB7F4D342C77177300545307 /* TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
 		AB7F4D362C77240300545307 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		ABC253702C7820100059055B /* MovieResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
+		ABC253722C7824210059055B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		ABC253742C7827C40059055B /* TVNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNetwork.swift; sourceTree = "<group>"; };
+		ABC253762C7829710059055B /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
+		ABC253782C78300F0059055B /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +88,6 @@
 		AB1FF3202B6B2457000DBACC /* MVVM&CodeUI&CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				AB7F4D332C77176A00545307 /* Entities */,
 				AB7F4D302C7714FC00545307 /* Network */,
 				AB1FF3212B6B2457000DBACC /* AppDelegate.swift */,
 				AB1FF3232B6B2457000DBACC /* SceneDelegate.swift */,
@@ -102,7 +111,12 @@
 		AB7F4D302C7714FC00545307 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AB7F4D332C77176A00545307 /* Entities */,
 				AB7F4D312C77151000545307 /* Const.swift */,
+				ABC253722C7824210059055B /* Network.swift */,
+				ABC253742C7827C40059055B /* TVNetwork.swift */,
+				ABC253762C7829710059055B /* MovieNetwork.swift */,
+				ABC253782C78300F0059055B /* NetworkProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -112,6 +126,7 @@
 			children = (
 				AB7F4D342C77177300545307 /* TV.swift */,
 				AB7F4D362C77240300545307 /* Movie.swift */,
+				ABC253702C7820100059055B /* MovieResult.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -231,9 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC253712C7820100059055B /* MovieResult.swift in Sources */,
 				AB1FF3262B6B2457000DBACC /* ViewController.swift in Sources */,
+				ABC253732C7824210059055B /* Network.swift in Sources */,
+				ABC253752C7827C40059055B /* TVNetwork.swift in Sources */,
 				AB7F4D322C77151000545307 /* Const.swift in Sources */,
+				ABC253772C7829710059055B /* MovieNetwork.swift in Sources */,
 				AB7F4D372C77240300545307 /* Movie.swift in Sources */,
+				ABC253792C78300F0059055B /* NetworkProvider.swift in Sources */,
 				AB1FF3222B6B2457000DBACC /* AppDelegate.swift in Sources */,
 				AB7F4D352C77177300545307 /* TV.swift in Sources */,
 				AB1FF3242B6B2457000DBACC /* SceneDelegate.swift in Sources */,
