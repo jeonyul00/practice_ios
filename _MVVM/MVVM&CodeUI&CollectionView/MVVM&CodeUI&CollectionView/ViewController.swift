@@ -20,9 +20,16 @@ class ViewController: UIViewController {
         return collectionView
     }()
     
+    let viewModel = ViewModel()
+    let tvTrigger = PublishSubject<Void>()
+    let movieTrigger = PublishSubject<Void>()
+    let dispose = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        bindViewModel()
+        bindView()
     }
     
     
@@ -49,4 +56,24 @@ extension ViewController {
         
     }
     
+}
+
+// MARK: - Bind
+extension ViewController {
+    private func bindViewModel() {
+        let input = ViewModel.Input(tvTrigger: tvTrigger.asObservable(), movieTrigger: movieTrigger.asObservable())
+        let output = viewModel.transform(input: input)
+        
+        output.tvList.bind { tvList in
+            print(tvList)
+        }.disposed(by:dispose)
+    }
+    
+    
+    private func bindView() {
+        buttonView.tvButton.rx.tap.bind { [weak self] _ in
+            self?.tvTrigger.onNext(Void())
+        }.disposed(by: dispose)
+        
+    }
 }
