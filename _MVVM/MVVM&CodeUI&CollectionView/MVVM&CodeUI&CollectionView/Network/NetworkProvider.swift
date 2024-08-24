@@ -23,7 +23,7 @@ final class NetworkProvider {
     func makeMovieNetwork()-> MovieNetwork {
         let network = Network<MovieListModel>(endpoint)
         return MovieNetwork(network: network)
-
+        
     }
     
     
