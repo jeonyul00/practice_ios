@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         setUI()
         bindViewModel()
         bindView()
+        tvTrigger.onNext(())
     }
     
     
@@ -41,8 +42,6 @@ extension ViewController {
         self.view.addSubview(buttonView)
         self.view.addSubview(collectionView)
         
-        collectionView.backgroundColor = .blue
-        
         buttonView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
             make.height.equalTo(80)
@@ -52,7 +51,6 @@ extension ViewController {
             make.leading.trailing.bottom.equalToSuperview()
             make.top.equalTo(buttonView.snp.bottom)
         }
-        
         
     }
     
@@ -67,13 +65,21 @@ extension ViewController {
         output.tvList.bind { tvList in
             print(tvList)
         }.disposed(by:dispose)
+        
+        output.movieResult.bind { movieResult in
+            print(movieResult)
+        }.disposed(by:dispose)
     }
-    
     
     private func bindView() {
         buttonView.tvButton.rx.tap.bind { [weak self] _ in
             self?.tvTrigger.onNext(Void())
         }.disposed(by: dispose)
         
+        buttonView.movieButton.rx.tap.bind { [weak self] _ in
+            self?.movieTrigger.onNext(Void())
+        }.disposed(by:dispose)
+        
     }
 }
+

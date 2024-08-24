@@ -9,7 +9,7 @@ import Foundation
 
 struct MovieListModel:Decodable {
     let page: Int
-    let result:[Movie]
+    let results:[Movie]
 }
 
 struct Movie:Decodable {
@@ -25,7 +25,7 @@ struct Movie:Decodable {
         case posterPath = "poster_path"
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
-        case releaseDate = "release_Date"
+        case releaseDate = "release_date"
     }
     
     init(from decoder: any Decoder) throws {
@@ -34,8 +34,8 @@ struct Movie:Decodable {
         overview = try container.decode(String.self, forKey: .overview)
         let path = try container.decode(String.self, forKey: .posterPath)
         posterURL = "https://image.tmdb.org/t/p/w500\(path)"
-        let voteAverage = try container.decode(String.self, forKey: .voteAverage)
-        let voteCount = try container.decode(String.self, forKey: .voteCount)
+        let voteAverage = try container.decode(Float.self, forKey: .voteAverage)
+        let voteCount = try container.decode(Int.self, forKey: .voteCount)
         vote = "\(voteAverage) (\(voteCount))"
         releaseDate = try container.decode(String.self, forKey: .releaseDate)
     }
