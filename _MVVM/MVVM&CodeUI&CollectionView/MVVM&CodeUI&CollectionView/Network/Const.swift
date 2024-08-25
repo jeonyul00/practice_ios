@@ -7,5 +7,5 @@
 
 import Foundation
 
-let APIKEY="92be1a55a0822ae8cf51184805441bed"
+let APIKEY=""
 
