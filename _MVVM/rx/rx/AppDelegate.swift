@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  01_StrongRefernce
+//  rx
 //
-//  Created by 전율 on 2023/12/30.
+//  Created by 전율 on 8/25/24.
 //
 
 import UIKit
