@@ -1,5 +1,22 @@
 import UIKit
 
+struct Books:Codable {
+    let totalCount: Int
+    let list: [book]
+    let code: Int
+    let message:String?
+    
+    struct book:Codable {
+        let id: Int
+        let title: String
+        let summary: String
+        let storeLink: String
+        let publicationDate: Date
+    }
+    
+}
+
+
 // url 생성
 //let url = URL(string: "https://kxapi.azurewebsites.net/helloworld?apiKey=Vp3lkFGT4CyPC5t8vF8D")!
 //url.scheme // https
@@ -20,9 +37,23 @@ let task = session.dataTask(with: url) { data, response, error in
     guard let httpResponse = response as? HTTPURLResponse else { return }
     if httpResponse.statusCode == 200 {
         guard let data else { return }
-        let str = String(data: data, encoding: .utf8)!
-        print(str)
+        do {
+            let formmater = DateFormatter()
+            formmater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .formatted(formmater)
+            let result = try decoder.decode(Books.self, from: data)
+            result.list.forEach({ book in
+                print(URL(string: book.storeLink)!, book.publicationDate)                
+            })
+        } catch {
+            print(error)
+        }
     }
 }
 
 task.resume()
+
+
+
+
