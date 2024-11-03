@@ -68,6 +68,54 @@ class ViewController: UIViewController {
         }
     }
     
+    func sendLoginButton() {
+        guard let url = URL(string: "https://kxapi.azurewebsites.net/login?apiKey=Vp3lkFGT4CyPC5t8vF8D") else {
+            print("Invalid URL")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let body = LoginPostBody(id: "kxcoding", password: "1234")
+        do {
+            request.httpBody = try JSONEncoder().encode(body)
+        } catch {
+            print("Failed to encode body: \(error)")
+            return
+        }
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Request failed with error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Invalid response")
+                return
+            }
+            
+            switch httpResponse.statusCode {
+            case 200:
+                if let data = data {
+                    do {
+                        let result = try JSONDecoder().decode(LoginResponse.self, from: data)
+                        print(result.message)
+                    } catch {
+                        print("Failed to decode response: \(error)")
+                    }
+                }
+            default:
+                print("HTTP Error: \(httpResponse.statusCode)")
+            }
+        }
+        task.resume()
+    }
+
+    
     func loadFromKeychain(key:String)-> String? {
         let query = [
             kSecClass:kSecClassGenericPassword,
