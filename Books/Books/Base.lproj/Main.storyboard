@@ -22,14 +22,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="32b-RR-Rln" style="IBUITableViewCellStyleDefault" id="rKW-9S-xsH">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rKW-9S-xsH" id="2Xb-QT-LrR">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="44.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="32b-RR-Rln">
-                                                    <rect key="frame" x="20" y="0.0" width="334.66666666666669" height="43.666667938232422"/>
+                                                    <rect key="frame" x="20" y="0.0" width="334.66666666666669" height="44.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
@@ -89,7 +89,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y3a-7L-eqK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="cAU-c8-4dR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="cAU-c8-4dR">
+                            <connections>
+                                <segue destination="Sx6-MD-5s8" kind="show" id="5Fw-KC-HQW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textView" destination="5HD-Ch-hBw" id="CSv-8C-ZZG"/>
@@ -98,6 +102,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byq-Ms-61g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1754.9618320610687" y="24.647887323943664"/>
+        </scene>
+        <!--Link View Controller-->
+        <scene sceneID="IGe-dM-zUv">
+            <objects>
+                <viewController id="Sx6-MD-5s8" customClass="LinkViewController" customModule="Books" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hzw-wU-bSM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhm-RF-hNW">
+                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ijB-t6-2Yw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Yhm-RF-hNW" secondAttribute="bottom" id="Gcc-Tt-8ev"/>
+                            <constraint firstItem="Yhm-RF-hNW" firstAttribute="top" secondItem="ijB-t6-2Yw" secondAttribute="top" id="gSw-nj-C7B"/>
+                            <constraint firstItem="ijB-t6-2Yw" firstAttribute="trailing" secondItem="Yhm-RF-hNW" secondAttribute="trailing" id="ngk-q3-1eH"/>
+                            <constraint firstItem="Yhm-RF-hNW" firstAttribute="leading" secondItem="ijB-t6-2Yw" secondAttribute="leading" id="y8N-0N-fsD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ri9-gm-mnZ"/>
+                    <connections>
+                        <outlet property="webView" destination="Yhm-RF-hNW" id="peN-ur-bJ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emh-yS-QQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2594.6564885496182" y="24.647887323943664"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yn9-Pp-jbU">

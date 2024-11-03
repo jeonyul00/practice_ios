@@ -17,6 +17,7 @@
 		AB3C0DCF2CD627F60022C447 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C0DCE2CD627F60022C447 /* APIClient.swift */; };
 		AB3C0DD12CD634A30022C447 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C0DD02CD634A30022C447 /* DetailViewController.swift */; };
 		AB3C0DD32CD634EF0022C447 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C0DD22CD634EF0022C447 /* BookDetail.swift */; };
+		AB4675B22CD71D1700C33F8E /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4675B12CD71D1700C33F8E /* LinkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AB3C0DCE2CD627F60022C447 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		AB3C0DD02CD634A30022C447 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AB3C0DD22CD634EF0022C447 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
+		AB4675B12CD71D1700C33F8E /* LinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				AB3C0DB82CD626120022C447 /* SceneDelegate.swift */,
 				AB3C0DBA2CD626120022C447 /* ViewController.swift */,
 				AB3C0DD02CD634A30022C447 /* DetailViewController.swift */,
+				AB4675B12CD71D1700C33F8E /* LinkViewController.swift */,
 				AB3C0DBC2CD626120022C447 /* Main.storyboard */,
 				AB3C0DBF2CD626130022C447 /* Assets.xcassets */,
 				AB3C0DC12CD626130022C447 /* LaunchScreen.storyboard */,
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4675B22CD71D1700C33F8E /* LinkViewController.swift in Sources */,
 				AB3C0DCC2CD627400022C447 /* Books.swift in Sources */,
 				AB3C0DBB2CD626120022C447 /* ViewController.swift in Sources */,
 				AB3C0DB72CD626120022C447 /* AppDelegate.swift in Sources */,
