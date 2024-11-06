@@ -41,6 +41,12 @@ class VideoDowonloader {
         }
     }
     
+    // concurreny
+    func download() async throws -> URL {
+        let (data, _) = try await URLSession.shared.data(from: url)
+        try data.write(to: localUrl, options: .atomic)
+        return localUrl
+    }    
     
     
 }
