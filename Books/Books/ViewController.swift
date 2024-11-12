@@ -15,14 +15,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.dataSource = self
         
-        APIClient.shared.fetchBooks { book in
-            DispatchQueue.main.async {
-                self.books = book.list
-                self.tableView.reloadData()
+        //        APIClient.shared.fetchBooks { book in
+        //            DispatchQueue.main.async {
+        //                self.books = book.list
+        //                self.tableView.reloadData()
+        //            }
+        //        }
+        
+        Task {
+            do {
+                books = try await APIClient.shared.fetchBooks()
+                tableView.reloadData()
+            } catch {
+                print(error)
             }
+            
         }
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
@@ -44,5 +53,5 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.text = book.title
         return cell
     }
-        
+    
 }
