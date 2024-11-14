@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -100,10 +101,25 @@
                     <view key="view" contentMode="scaleToFill" id="R6z-rb-1ec">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aH-jx-zMy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LIi-tU-gD4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LIi-tU-gD4" firstAttribute="trailing" secondItem="8aH-jx-zMy" secondAttribute="trailing" id="0mv-SY-P4F"/>
+                            <constraint firstItem="8aH-jx-zMy" firstAttribute="top" secondItem="LIi-tU-gD4" secondAttribute="top" id="6pa-g9-f8C"/>
+                            <constraint firstItem="LIi-tU-gD4" firstAttribute="bottom" secondItem="8aH-jx-zMy" secondAttribute="bottom" id="gyO-Kj-hfi"/>
+                            <constraint firstItem="8aH-jx-zMy" firstAttribute="leading" secondItem="LIi-tU-gD4" secondAttribute="leading" id="sRu-Zr-kmG"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="RyE-5v-49A"/>
+                    <connections>
+                        <outlet property="mapView" destination="8aH-jx-zMy" id="LVx-9A-OtZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfJ-2f-gOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,6 +131,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QGg-hv-CnE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XYQ-lP-Gk0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -132,7 +149,7 @@
         <image name="location" catalog="system" width="128" height="119"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -14,6 +14,7 @@
 		ABB6F9962CE31D5B00823C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB6F9952CE31D5B00823C6F /* Assets.xcassets */; };
 		ABB6F9992CE31D5B00823C6F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ABB6F9982CE31D5B00823C6F /* Base */; };
 		ABB6F9A12CE31E1A00823C6F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6F9A02CE31E1A00823C6F /* MapViewController.swift */; };
+		ABB6F9A32CE47FF000823C6F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABB6F9A22CE47FF000823C6F /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		ABB6F9982CE31D5B00823C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB6F99A2CE31D5B00823C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB6F9A02CE31E1A00823C6F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		ABB6F9A22CE47FF000823C6F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				ABB6F9952CE31D5B00823C6F /* Assets.xcassets */,
 				ABB6F9972CE31D5B00823C6F /* LaunchScreen.storyboard */,
 				ABB6F99A2CE31D5B00823C6F /* Info.plist */,
+				ABB6F9A22CE47FF000823C6F /* Settings.bundle */,
 			);
 			path = HelloLocation;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB6F9A32CE47FF000823C6F /* Settings.bundle in Resources */,
 				ABB6F9962CE31D5B00823C6F /* Assets.xcassets in Resources */,
 				ABB6F9992CE31D5B00823C6F /* Base in Resources */,
 				ABB6F9942CE31D5A00823C6F /* Base in Resources */,
@@ -299,6 +303,8 @@
 				DEVELOPMENT_TEAM = 5KB7H88BWW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloLocation/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,6 +334,8 @@
 				DEVELOPMENT_TEAM = 5KB7H88BWW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloLocation/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
