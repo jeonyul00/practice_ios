@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB15AC202CE6DFE600143F25 /* SeoulFreeWayDrive.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AB15AC1F2CE6DFE600143F25 /* SeoulFreeWayDrive.gpx */; };
 		ABB6F98D2CE31D5A00823C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6F98C2CE31D5A00823C6F /* AppDelegate.swift */; };
 		ABB6F98F2CE31D5A00823C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6F98E2CE31D5A00823C6F /* SceneDelegate.swift */; };
 		ABB6F9912CE31D5A00823C6F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6F9902CE31D5A00823C6F /* LocationViewController.swift */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB15AC1E2CE6C7DE00143F25 /* Seoul.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Seoul.gpx; sourceTree = "<group>"; };
+		AB15AC1F2CE6DFE600143F25 /* SeoulFreeWayDrive.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SeoulFreeWayDrive.gpx; sourceTree = "<group>"; };
 		ABB6F9892CE31D5A00823C6F /* HelloLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB6F98C2CE31D5A00823C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB6F98E2CE31D5A00823C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				ABB6F9972CE31D5B00823C6F /* LaunchScreen.storyboard */,
 				ABB6F99A2CE31D5B00823C6F /* Info.plist */,
 				ABB6F9A22CE47FF000823C6F /* Settings.bundle */,
+				AB15AC1E2CE6C7DE00143F25 /* Seoul.gpx */,
+				AB15AC1F2CE6DFE600143F25 /* SeoulFreeWayDrive.gpx */,
 			);
 			path = HelloLocation;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				ABB6F9962CE31D5B00823C6F /* Assets.xcassets in Resources */,
 				ABB6F9992CE31D5B00823C6F /* Base in Resources */,
 				ABB6F9942CE31D5A00823C6F /* Base in Resources */,
+				AB15AC202CE6DFE600143F25 /* SeoulFreeWayDrive.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +309,8 @@
 				DEVELOPMENT_TEAM = 5KB7H88BWW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloLocation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,6 +342,8 @@
 				DEVELOPMENT_TEAM = 5KB7H88BWW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloLocation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

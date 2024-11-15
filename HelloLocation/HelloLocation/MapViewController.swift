@@ -32,9 +32,17 @@ class MapViewController: UIViewController {
 
     
     func move(to location: CLLocation) {
-        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 100, longitudinalMeters: 100)
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
         mapView.setRegion(region, animated: true)
     }
+    
+    @IBAction func requestPreciseLocation(_ sender: Any) {
+        if manager.accuracyAuthorization == .reducedAccuracy {
+            manager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: "default")
+            
+        }
+    }
+    
     
 }
 

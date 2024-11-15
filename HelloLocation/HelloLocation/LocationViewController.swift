@@ -19,6 +19,8 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self
+        // 100미터 이상 움직였을 때 didUpdateLocations 호출
+        manager.distanceFilter = 100
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,6 +37,25 @@ class LocationViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         manager.stopUpdatingLocation()
+    }
+    
+    func reverseGeocode(location: CLLocation){
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location,preferredLocale: Locale(identifier: "ko_kr")) { placemarks, error in
+            if let first = placemarks?.first {
+                print(first.country)
+                print(first.postalCode)
+                print(first.administrativeArea)
+                print(first.subAdministrativeArea)
+                print(first.locality)
+                print(first.subLocality)
+                print(first.thoroughfare)
+                print(first.subLocality)                
+                self.adressLabel.text = first.name
+            }
+            
+        }
+        
     }
 }
 
@@ -75,6 +96,8 @@ extension LocationViewController:CLLocationManagerDelegate {
         if let currnetLocation = locations.last {
             latitudeLabel.text = "\(currnetLocation.coordinate.latitude)"
             longitudeLabel.text = "\(currnetLocation.coordinate.longitude)"
+            reverseGeocode(location: currnetLocation)
         }
+     
     }
 }
