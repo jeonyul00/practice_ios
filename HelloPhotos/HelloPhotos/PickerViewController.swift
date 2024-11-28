@@ -20,6 +20,12 @@ class PickerViewController: UIViewController {
         var configuration = PHPickerConfiguration(photoLibrary: .shared())
         configuration.filter = .images
         configuration.preferredAssetRepresentationMode = .current
+        if #available(iOS 17, *) {
+            configuration.disabledCapabilities = [.collectionNavigation, .sensitivityAnalysisIntervention]
+        }
+        
+        configuration.selectionLimit = 10
+        configuration.selection = .ordered
         
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = self
@@ -29,7 +35,7 @@ class PickerViewController: UIViewController {
 }
 
 extension PickerViewController: PHPickerViewControllerDelegate {
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {        
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         if let first = results.first {
             if first.itemProvider.canLoadObject(ofClass: UIImage.self) {
                 first.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
@@ -40,6 +46,9 @@ extension PickerViewController: PHPickerViewControllerDelegate {
             }
         }
         
-        picker.dismiss(animated: true)
+        if results.count <= 10 || results.isEmpty {
+            picker.dismiss(animated: true)
+        }
+        
     }
 }

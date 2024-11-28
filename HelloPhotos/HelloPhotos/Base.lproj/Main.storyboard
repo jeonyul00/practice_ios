@@ -93,18 +93,88 @@
             </objects>
             <point key="canvasLocation" x="2646.5648854961833" y="686.61971830985919"/>
         </scene>
+        <!--Limited Library-->
+        <scene sceneID="I8j-gg-7fd">
+            <objects>
+                <viewController id="TMf-Un-7he" customClass="LimitedLibraryViewController" customModule="HelloPhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvH-5v-CWA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NLT-bG-6Li">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W7A-bb-jQO">
+                                    <size key="itemSize" width="249" height="228"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="NKj-zx-hBR" customClass="ImageCollectionViewCell" customModule="HelloPhotos" customModuleProvider="target">
+                                        <rect key="frame" x="72" y="10" width="249" height="228"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KfY-8X-qbZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="249" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xfP-iu-FRk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="228"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="xfP-iu-FRk" secondAttribute="bottom" id="Bvz-2a-5sD"/>
+                                                <constraint firstItem="xfP-iu-FRk" firstAttribute="leading" secondItem="KfY-8X-qbZ" secondAttribute="leading" id="CkZ-bm-LvY"/>
+                                                <constraint firstAttribute="trailing" secondItem="xfP-iu-FRk" secondAttribute="trailing" id="b14-fW-381"/>
+                                                <constraint firstItem="xfP-iu-FRk" firstAttribute="top" secondItem="KfY-8X-qbZ" secondAttribute="top" id="nPN-NQ-4Yj"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="249" height="228"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="xfP-iu-FRk" id="2IU-pT-Gr3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wwe-mf-QUF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NLT-bG-6Li" secondAttribute="bottom" id="DD7-f5-ubz"/>
+                            <constraint firstItem="NLT-bG-6Li" firstAttribute="leading" secondItem="wwe-mf-QUF" secondAttribute="leading" id="QVG-Uc-FXY"/>
+                            <constraint firstItem="NLT-bG-6Li" firstAttribute="top" secondItem="fvH-5v-CWA" secondAttribute="top" id="aid-Kr-nyo"/>
+                            <constraint firstItem="NLT-bG-6Li" firstAttribute="trailing" secondItem="wwe-mf-QUF" secondAttribute="trailing" id="b5h-YT-qg2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Limited Library" id="Ctb-qh-iYF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ljd-v8-RNg">
+                            <connections>
+                                <action selector="editSelectedAssets:" destination="TMf-Un-7he" id="EN7-DN-Bla"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="NLT-bG-6Li" id="QZf-pM-vH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ybq-Ud-hAw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4356.4885496183206" y="686.61971830985919"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1VG-3H-Ghc">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zvV-g5-osv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j3j-wX-8Oc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="MIL-1r-wwQ" kind="relationship" relationship="viewControllers" id="9pN-9N-BP7"/>
                         <segue destination="HoE-YW-Qt8" kind="relationship" relationship="viewControllers" id="qig-Ew-L6f"/>
+                        <segue destination="oEZ-xl-hOn" kind="relationship" relationship="viewControllers" id="J78-lR-c25"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nvf-UC-ESg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,10 +219,30 @@
             </objects>
             <point key="canvasLocation" x="1839" y="687"/>
         </scene>
+        <!--Limited Library-->
+        <scene sceneID="cYb-eC-bvb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oEZ-xl-hOn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Limited Library" image="tray" catalog="system" id="jTQ-gX-Fn5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uue-EO-byq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TMf-Un-7he" kind="relationship" relationship="rootViewController" id="ZLV-po-AOc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNc-XY-Ckp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3429.770992366412" y="686.61971830985919"/>
+        </scene>
     </scenes>
     <resources>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.stack" catalog="system" width="126" height="128"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
