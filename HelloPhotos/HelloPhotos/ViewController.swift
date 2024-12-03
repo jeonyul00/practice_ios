@@ -11,6 +11,9 @@ import Photos
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var allPhotos: PHFetchResult<PHAsset>?
+    let imageManager = PHImageManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +28,7 @@ class ViewController: UIViewController {
                 break
             case .restricted, .denied:
                 print(status.rawValue)
-            case .authorized:
-                print(status.rawValue)
-            case .limited:
+            case .authorized, .limited:
                 print(status.rawValue)
             @unknown default:
                 fatalError()
@@ -35,17 +36,45 @@ class ViewController: UIViewController {
         }
     }
     
+    func fetchAllPhotos() {
+        let options = PHFetchOptions()
+        options.sortDescriptors = [
+            NSSortDescriptor(key: "creationDate", ascending: false)
+        ]
+        allPhotos = PHAsset.fetchAssets(with: options)
+        collectionView.reloadData()
+    }
 }
 
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return allPhotos?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: AssetCollectionViewCell.self), for: indexPath) as! AssetCollectionViewCell
+        if let target = allPhotos?.object(at: indexPath.item) {
+            var size = CGSize.zero
+            if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                let width = Int((collectionView.bounds.width - (layout.sectionInset.left + layout.sectionInset.right + layout.minimumInteritemSpacing)) / 2)
+                size = CGSize(width: width, height: width)
+            }
+            imageManager.requestImage(for: target, targetSize: size, contentMode: .aspectFill, options:nil) { image, _ in
+                cell.ThumbnailImageView.image = image
+            }
+        }
         return cell
     }
+    
 }
 
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else { return .zero }
+        let width = Int((collectionView.bounds.width - (layout.sectionInset.left + layout.sectionInset.right + layout.minimumInteritemSpacing)) / 2)
+        return CGSize(width: width, height: width)
+    }
+    
+}

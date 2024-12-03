@@ -21,20 +21,65 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q01-4C-Eu1">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Lm-F0-eZp">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Lm-F0-eZp">
+                                    <size key="itemSize" width="237" height="203"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="65M-a8-2LH">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AssetCollectionViewCell" id="65M-a8-2LH" customClass="AssetCollectionViewCell" customModule="HelloPhotos" customModuleProvider="target">
+                                        <rect key="frame" x="78" y="10" width="237" height="203"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aPk-FB-eDy">
-                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="237" height="203"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="geg-3g-U0T">
+                                                    <rect key="frame" x="0.0" y="0.0" width="237" height="203"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCq-7a-Ydp">
+                                                    <rect key="frame" x="187" y="153" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="5Dc-qg-5JK"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Kfb-qs-fHr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Cte-sh-M04">
+                                                    <rect key="frame" x="187" y="22" width="30" height="27"/>
+                                                    <color key="tintColor" systemColor="systemPinkColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="lfx-Rx-RQp"/>
+                                                        <constraint firstAttribute="width" constant="30" id="oaE-BD-VnS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2C-e6-guf">
+                                                    <rect key="frame" x="20" y="162" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="e2C-e6-guf" secondAttribute="bottom" constant="20" id="22E-De-T51"/>
+                                                <constraint firstAttribute="trailing" secondItem="Cte-sh-M04" secondAttribute="trailing" constant="20" id="89a-qN-tBG"/>
+                                                <constraint firstAttribute="trailing" secondItem="HCq-7a-Ydp" secondAttribute="trailing" constant="20" id="Fe8-2h-jYx"/>
+                                                <constraint firstAttribute="bottom" secondItem="geg-3g-U0T" secondAttribute="bottom" id="Xbb-gC-9Cd"/>
+                                                <constraint firstItem="geg-3g-U0T" firstAttribute="leading" secondItem="aPk-FB-eDy" secondAttribute="leading" id="aJS-jT-Mir"/>
+                                                <constraint firstAttribute="bottom" secondItem="HCq-7a-Ydp" secondAttribute="bottom" constant="20" id="cNH-QA-BmC"/>
+                                                <constraint firstItem="e2C-e6-guf" firstAttribute="leading" secondItem="aPk-FB-eDy" secondAttribute="leading" constant="20" id="hdW-MC-2bW"/>
+                                                <constraint firstItem="Cte-sh-M04" firstAttribute="top" secondItem="aPk-FB-eDy" secondAttribute="top" constant="20" id="jll-rv-3da"/>
+                                                <constraint firstItem="geg-3g-U0T" firstAttribute="top" secondItem="aPk-FB-eDy" secondAttribute="top" id="tjX-Gk-KRC"/>
+                                                <constraint firstAttribute="trailing" secondItem="geg-3g-U0T" secondAttribute="trailing" id="vQg-IW-YK7"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="237" height="203"/>
+                                        <connections>
+                                            <outlet property="ThumbnailImageView" destination="geg-3g-U0T" id="74W-SG-Ge1"/>
+                                            <outlet property="durationLabel" destination="e2C-e6-guf" id="JBo-jR-xVr"/>
+                                            <outlet property="favoriteImageView" destination="Cte-sh-M04" id="pJv-xQ-X0q"/>
+                                            <outlet property="typeImageView" destination="HCq-7a-Ydp" id="1Yc-7y-Hqq"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -55,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024" y="687"/>
+            <point key="canvasLocation" x="1023.6641221374045" y="686.61971830985919"/>
         </scene>
         <!--Picker-->
         <scene sceneID="m7V-ox-uU2">
@@ -240,11 +285,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.stack" catalog="system" width="126" height="128"/>
         <image name="tray" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
